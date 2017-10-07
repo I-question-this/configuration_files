@@ -1,0 +1,7 @@
+[user]
+	email = tylerofthewest@gmail.com
+	name = Tyler Westland
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore

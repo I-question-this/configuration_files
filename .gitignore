@@ -1,0 +1,9 @@
+# Jetbrains
+.idea/
+gen/
+
+# Doxygen documentation
+docs/doxygen/html
+docs/doxygen/latex
+# Temp files
+*.tmp
