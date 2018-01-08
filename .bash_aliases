@@ -9,6 +9,9 @@ alias cpplint="python ~/git/cpp_styleguide/cpplint/cpplint.py"
 # Display Settings
 export DISPLAY=:0
 
+# Fix for lack of socket support in WSL (Windows Subsystem for Linux). It changes the D-Bus system to use TCP networking instead of sockets.
+alias configure_dbus_to_use_TCP="sudo sed -i 's/<listen>.*<\/listen>/<listen>tcp:host=localhost,port=0<\/listen>/' /etc/dbus-1/session.conf"
+
 # G3D
 G3D=/home/tyler/G3D9
 export PATH=$PATH:$G3D/bin
