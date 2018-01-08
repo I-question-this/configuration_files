@@ -1,0 +1,14 @@
+# Unison preferences
+# ignore's
+# ignore = Name example
+ignore = Name $RECYCLE.BIN
+ignore = Name System Volume Information
+
+# ignorenot's
+# ignorenot = Name example
+
+# Label
+label = Main_to_Backup
+# Root`s
+root = /mnt/d
+root = /mnt/g/

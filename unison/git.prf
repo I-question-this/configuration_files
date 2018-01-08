@@ -1,0 +1,34 @@
+# Unison preferences
+# ignore's
+ignore = Name .*
+ignore = Name $RECYCLE.BIN
+ignore = Name System Volume Information
+ignore = Name authorized_keys
+ignore = Name known_hosts
+ignore = Name www
+ignore = Name Desktop
+ignore = Name Downloads
+ignore = Name .unison/*
+
+# ignorenot's
+ignorenot = Name .gi*
+ignorenot = Name .bashrc
+ignorenot = Name .bash_aliases
+ignorenot = Name .vmdrc
+ignorenot = Name .ssh
+ignorenot = Name .bash_logout
+ignorenot = Name .unison
+ignorenot = Name .unison/*.prf
+ignorenot = Name .idea
+# Rhythmbox configuration files
+ignorenot = Name ~/.local/share/rhythmbox
+ignorenot = Name ~/.gnome2/rhythmbox
+ignorenot = Name ~/.gnome2/accels/rhythmbox
+ignorenot = Name ~/.cache/rhythmbox
+ignorenot = Name ~/.gconf/apps/rhythmbox
+
+# Label
+label = Local-Home-Backup
+# Root`s
+root = /home/tyler/git
+root = /media/tyler/13660596-d1a0-41a3-8bf0-cb9a867faafd/git
