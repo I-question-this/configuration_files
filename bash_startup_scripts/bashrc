@@ -114,7 +114,3 @@ fi
 # Extra settings. These are setting specific to this computer.
 export BASH_SETTING_PIECES_DIR="/home/$USER/git/configuration_files/bash_startup_scripts/pieces"
 . ~/.bash_setting_pieces
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/tyler/.sdkman"
-[[ -s "/home/tyler/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tyler/.sdkman/bin/sdkman-init.sh"
