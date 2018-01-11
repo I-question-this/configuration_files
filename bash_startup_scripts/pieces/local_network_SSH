@@ -1,0 +1,8 @@
+# EXPORTS
+export Dexter_IP="192.168.1.17"
+export Git_Server_IP="192.168.1.18"
+
+# ALIASES
+alias Dexter_Windows_SSH="ssh tyler@$Dexter_IP"
+alias Dexter_WSL_SSH="ssh -p 23 tyler@$Dexter_IP"
+alias GitServerSSH="ssh tyler@$Git_Server_IP"

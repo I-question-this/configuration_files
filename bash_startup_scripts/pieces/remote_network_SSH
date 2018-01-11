@@ -1,0 +1,5 @@
+# EXPORTS
+export HOME_IP="westlandbros.com"
+
+# ALIASES
+alias GitServerSSH="ssh tyler@$HOME_IP"
