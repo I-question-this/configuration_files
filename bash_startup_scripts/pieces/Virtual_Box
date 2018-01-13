@@ -1,0 +1,2 @@
+# ALIASES
+alias mount_share="sudo mount -t vboxf -o uid=$UID,gid=$(id -g) share ~/host"
