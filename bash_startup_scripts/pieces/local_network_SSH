@@ -4,6 +4,9 @@ export Git_Server_IP="192.168.1.18"
 export My_Phone_IP="192.168.1.5"
 
 # ALIASES
+# rsync Backups
+alias My_Phone_DeckedBuilder_Backup="rsync -uvr -e 'ssh -p 2222' admin@$My_Phone_IP:/storage/3EBB-FFDF/DeckedBuilder ~/Documents/DeckBuilder"
+# SSHs
 alias Dexter_Windows_SSH="ssh tyler@$Dexter_IP"
 alias Dexter_WSL_SSH="ssh -p 23 tyler@$Dexter_IP"
 alias Git_Server_SSH="ssh tyler@$Git_Server_IP"
