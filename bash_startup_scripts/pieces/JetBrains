@@ -1,0 +1,2 @@
+# EXPORTS
+export PATH=$PATH:~/.local/share/JetBrains/Toolbox/bin
