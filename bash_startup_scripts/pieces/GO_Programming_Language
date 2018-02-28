@@ -1,2 +1,3 @@
 # EXPORTS
-export GOPATH=/home/tyler/Code/drive-go-code
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
