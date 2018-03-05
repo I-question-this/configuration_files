@@ -1,0 +1,22 @@
+# Unison preferences
+# ignore's
+# ignore = Name example
+ignore = Name $RECYCLE.BIN
+ignore = Name .*
+ignore = Name lost+found
+ignore = Name System Volume Information
+
+# ignorenot's
+# ignorenot = Name example
+ignorenot = Name .bashrc
+ignorenot = Name .bash_logout
+ignorenot = Name .git
+ignorenot = Name .profile
+ignorenot = Name .unison/*.prf
+ignorenot = Name .vimrc
+
+# Label
+label = Home_to_Backup
+# Root`s
+root = /home/tyler
+root = /media/tyler/BackupStorage/tyler_home
