@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Create the currebt date
 DATE=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FOLDER="/home/tyler/unison_backup_logs"
-mkdir -p $LOG_FOLDER
-unison main_to_backup -auto -batch -ui text -silent &> $LOG_FOLDER/$DATE.log
+
+# VirtualBox Daily Save State 
+VBoxManage snapshot "git_server" take "Daily SnapShot -- $DATE" --description "Daily SnapShot -- $DATE"
+
+# Unison back up of hone directory
+unison home_to_backup -auto -batch -silent -logfile /var/log/unison/home_to_backup.log
