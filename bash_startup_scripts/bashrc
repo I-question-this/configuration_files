@@ -114,5 +114,5 @@ fi
 # Extra settings. These are setting specific to this computer.
 # This is like .bash_aliases, but more portable between setups
 # I don't make it an option because I want it to error if this is not set
-export BASH_SETTING_PIECES_DIR="/home/$USER/git/configuration_files/bash_startup_scripts/pieces"
+export BASH_SETTING_NON_LOGIN_PIECES_DIR="/home/$USER/git/configuration_files/bash_startup_scripts/non_login_pieces"
 . ~/.bash_setting_pieces

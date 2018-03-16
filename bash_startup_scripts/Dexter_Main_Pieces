@@ -1,5 +1,0 @@
-. $BASH_SETTING_PIECES_DIR/Git
-. $BASH_SETTING_PIECES_DIR/GO_Programming_Language
-. $BASH_SETTING_PIECES_DIR/JetBrains
-. $BASH_SETTING_PIECES_DIR/local_network_SSH
-. $BASH_SETTING_PIECES_DIR/random_utilities
