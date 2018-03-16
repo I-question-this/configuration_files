@@ -1,6 +1,6 @@
 # EXPORTS
-export Dexter_Main_IP="192.168.1.17"
-export Git_Server_IP="192.168.1.18"
+export Dexter_Main_IP="192.168.1.14"
+export Git_Server_IP="192.168.1.17"
 export My_Phone_IP="192.168.1.5"
 
 # ALIASES
