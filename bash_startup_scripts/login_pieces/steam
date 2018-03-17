@@ -1,6 +1,6 @@
 # Screen process for steam
 # Automtically create a screen dedicated to running steam
-if screen -ls | grep -Fq steam" -ne "true
+if screen -ls | grep -Fq steam -ne true
 then
 	screen steam_patch.sh -S steam -d -m
 fi

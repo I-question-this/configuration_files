@@ -1,0 +1,6 @@
+# Screen process for apt-get
+# Automtically create a screen dedicated to running apt-get
+if screen -ls | grep -Fq apt-get -ne true
+then
+	screen -S apt-get -d -m
+fi
