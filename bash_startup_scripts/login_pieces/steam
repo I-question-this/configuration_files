@@ -1,5 +1,5 @@
-# Screen process for apt-get
-# Automtically create a screen dedicated to running apt-get
+# Screen process for steam
+# Automtically create a screen dedicated to running steam
 if screen -ls | grep -Fq steam" -ne "true
 then
 	screen steam_patch.sh -S steam -d -m
