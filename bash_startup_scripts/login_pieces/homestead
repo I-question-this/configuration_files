@@ -1,6 +1,5 @@
 # Screen process for homestead
 # Automtically create a screen dedicated to running homestead
-if screen -ls | grep -Fq homestead -ne true
-then
-	screen -S homesteaad -d -m
+if ! $(screen -ls | grep -Fq homestead); then
+	screen -S homestead -d -m
 fi
