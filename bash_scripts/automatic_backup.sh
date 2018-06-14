@@ -4,8 +4,11 @@
 DATE=$(date +%Y-%m-%d-%H-%M-%S)
 
 # Logfiles
-UNISON_LOGFILE="/var/log/unison/home_to_backup.log"
-VBOX_LOGFILE="/var/log/vbox/git_server_snapshot.log"
+UNISON_LOGFILE=/var/log/unison/home_to_backup.log
+VBOX_LOGFILE=/var/log/vbox/git_server_snapshot.log
+
+# Put Date into VBOX_LOGFILE
+echo Backup Process Began -- $DATE >> $VBOX_LOGFILE
 
 # VirtualBox Daily SnapShot
 VBoxManage snapshot "git_server" take "DailySnapShot -- $DATE" --description "Daily Snap Shot -- $DATE" &>> $VBOX_LOGFILE 
