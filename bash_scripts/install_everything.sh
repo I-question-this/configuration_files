@@ -54,8 +54,8 @@ sudo apt install meld
 # Blender
 sudo apt install blender
 
-# X11VNC Server
-sudo apt install x11vnc
+# Markdown
+sudo apt install retext
 
 # VLC
 sudo apt install vlc
