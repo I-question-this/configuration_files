@@ -1,0 +1,2 @@
+. $BASH_SETTING_LOGIN_PIECES_DIR/apt-get
+. $BASH_SETTING_LOGIN_PIECES_DIR/jupyter-notebook
