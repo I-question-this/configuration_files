@@ -7,3 +7,5 @@ docs/doxygen/html
 docs/doxygen/latex
 # Temp files
 *.tmp
+# Swap Files
+.*.swp
