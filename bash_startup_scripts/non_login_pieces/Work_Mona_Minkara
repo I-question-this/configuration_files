@@ -1,13 +1,11 @@
 # EXPORTS
 export MAC_MINI_DOMAIN=monaminkara@x162-17.chem.umn.edu
 export MAC_PRO_DOMAIN=monaminkara@maxwell5.chem.umn.edu
-export IMAC_DOMAIN=monaminkara@x162-16.chem.umn.edu
+export IMAC_DOMAIN=monaminkara@x160-55.chem.umn.edu
 export MSI_DOMAIN=minka029@login.msi.umn.edu
-export SHERLOCK_DOMAIN=mona@x160-55.chem.umn.edu
 
 # ALIASES
 alias mini="ssh -Y ${MAC_MINI_DOMAIN}"
 alias pro="ssh -Y ${MAC_PRO_DOMAIN}"
 alias msi="ssh -Y ${MSI_DOMAIN}"
 alias imac="ssh -Y ${IMAC_DOMAIN}"
-alias sherlock_server="ssh -Y {SHERLOCK_DOMAIN}"
