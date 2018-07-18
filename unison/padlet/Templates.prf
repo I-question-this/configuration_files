@@ -1,0 +1,5 @@
+# Unison preferences
+label = Templates from my desktop
+root = /home/tyler/Templates
+root = ssh://tyler@westlandbros.com:23//home/tyler/Templates
+sshargs = -C

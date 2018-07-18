@@ -1,0 +1,5 @@
+# Unison preferences
+label = Computer Science nerd stuff!!
+root = /home/tyler/Development
+root = ssh://tyler@westlandbros.com:23//home/tyler/Development
+sshargs = -C
