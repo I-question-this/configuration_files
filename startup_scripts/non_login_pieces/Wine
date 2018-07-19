@@ -1,0 +1,5 @@
+# Set up the 32 bit wine prefix
+alias setup_wine_prefix_32-bit="WINEPREFIX=\"$HOME/.wine-prefix32\" WINEARCH=win32 wine wineboot"
+# Use the 32 bit wine prefix
+alias wine=32="WINEPREFIX=\"$HOME/.wine-prefix32\" wine"
+alias winetricks-32="WINEPREFIX=\"$HOME/.wine-prefix32\" winetricks"

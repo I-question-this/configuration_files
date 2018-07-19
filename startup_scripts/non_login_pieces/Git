@@ -1,0 +1,4 @@
+# ALIASES
+alias gitSubmoduleUpdate="git submodule update --checkout"
+alias gitCommit="git pull; git commit -m "
+alias gitMeld="git mergetool -t meld"
