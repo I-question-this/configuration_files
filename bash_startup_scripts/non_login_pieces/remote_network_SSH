@@ -1,7 +1,0 @@
-# EXPORTS
-export HOME_IP="westlandbros.com"
-
-# ALIASES
-alias GitServerSSH="ssh tyler@$HOME_IP"
-alias BigDexterSSH="ssh -p23 tyler@$HOME_IP"
-alias BigDexterNoMachineSSHTunnel="ssh -L 4001:localhost:4000 -N -p 23 tyler@$HOME_IP"

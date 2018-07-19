@@ -1,5 +1,0 @@
-# Screen process for steam
-# Automtically create a screen dedicated to running steam
-if ! $(screen -ls | grep -Fq steam); then
-	screen -S steam -d -m
-fi

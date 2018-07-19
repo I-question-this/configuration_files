@@ -1,4 +1,0 @@
-. $BASH_SETTING_LOGIN_PIECES_DIR/apt-get
-. $BASH_SETTING_LOGIN_PIECES_DIR/jupyter-notebook
-. $BASH_SETTING_LOGIN_PIECES_DIR/wacom_finger_touch_settings
-. $BASH_SETTING_LOGIN_PIECES_DIR/pywal_terminal_colorscheme
