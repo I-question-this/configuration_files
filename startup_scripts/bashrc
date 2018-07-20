@@ -8,6 +8,16 @@ case $- in
       *) return;;
 esac
 
+# Check if tmux is installed
+if which tmux >/dev/null 2>&1; then
+    # If not running interactively, do not do anything
+    # Probably not a nessecary check given the above check,
+    # but I wanted to keep it regardless for now.
+    [[ $- != *i* ]] && return
+    [[ -z "$TMUX" ]] && exec tmux
+fi
+
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
