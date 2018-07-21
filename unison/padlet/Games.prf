@@ -1,0 +1,5 @@
+# Unison preferences
+label = Game Saves and Installations
+root = /home/tyler/Games
+root = ssh://tyler@westlandbros.com:23//home/tyler/Games
+sshargs = -C

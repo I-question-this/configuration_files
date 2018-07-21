@@ -112,3 +112,6 @@ cd ~/apps/vmd-1.9.3
 sudo ./configure
 cd src
 sudo make install
+
+# Wallpapers
+sudo apt install -y wallch
