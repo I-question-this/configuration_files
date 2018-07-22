@@ -3,3 +3,4 @@
 . $BASH_SETTING_NON_LOGIN_PIECES_DIR/local_network_SSH
 . $BASH_SETTING_NON_LOGIN_PIECES_DIR/random_utilities
 . $BASH_SETTING_NON_LOGIN_PIECES_DIR/Work_Mona_Minkara
+. $BASH_SETTING_NON_LOGIN_PIECES_DIR/pywal_terminal_colorscheme
