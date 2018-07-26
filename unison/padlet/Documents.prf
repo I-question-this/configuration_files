@@ -11,6 +11,7 @@ path = logs
 path = Personal
 path = Resume-ProfessionalStuff
 path = Finance
+path = Apartments
 root = /home/tyler/Documents
 root = ssh://tyler@westlandbros.com:23//home/tyler/Documents
 sshargs = -C
