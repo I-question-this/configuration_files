@@ -1,61 +1,59 @@
 #!/bin/bash
 
-## APT ##
-# Python & Python3
-sudo apt install python
+## Python ##
+# Python
 sudo apt install python3
-
-# pip & pip3
-sudo apt install python-pip
+# pip
 sudo apt install python3-pip
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install numpy
+sudo -H pip3 install scipy
 
+## Ploting Programs ##
 # xmgrace
 sudo apt install grace
 
-# ffmpeg
+## Video Editors ##
 sudo apt install ffmpeg
 
-# Wine
+## Wine ##
 sudo apt install wine
-
-# PlayOnLinux
+sudo apt install winetricks # Unvalidated package name
 sudo apt install playonlinux
 
-# Gummi
+## LaTeX ##
 sudo apt install gummi
 
-# Geany
-sudo apt install geany
+## IDEs ##
+# Jetbrains toolkit
 
-# VirtualBox
-sudo apt install virtualbox
+## Virtual Machines ##
+sudo apt install -f ~/.install_everything/deb_files/virtualbox.deb
 
-# Unison
+## Back Up ##
 sudo apt install unison
 
-# Dia
+## Diagrams ##
 sudo apt install dia
 
-# Vim
+## Text Editor ##
+sudo apt install geany
 sudo apt install vim
 
-# Gimp
+## Image Editor ##
 sudo apt install gimp
 
-# Gpared Partion Manager
+## Partion Manager ##
 sudo apt install gparted
 
-# Data Display Debugger
+## Debbugger Program ##
 sudo apt install ddd
 
-# Meld Diff Viewer
+## Diff Viewer ##
 sudo apt install meld
 
 # Blender
 sudo apt install blender
-
-# Markdown
-sudo apt install retext
 
 # VLC
 sudo apt install vlc
@@ -69,16 +67,15 @@ sudo apt install lmms
 # Audacity -- Music Editer
 sudo apt install audacity
 
-## PIP & PIP3 ##
-sudo -H pip install --upgrade pip
-sudo -H pip3 install --upgrade pip
-# numericalunits
-sudo -H pip install numericalunits
-sudo -H pip3 install numericalunits
+# Nvidia Drivers
+# https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-390
 
-# numpy
-sudo -H pip install numpy
-sudo -H pip3 install numpy
+# Snippet Tool
+sudo apt install shutter
+
 
 ## Downloaded Programs ##
 # Install Ardinio IDE
@@ -112,6 +109,3 @@ cd ~/apps/vmd-1.9.3
 sudo ./configure
 cd src
 sudo make install
-
-# Wallpapers
-sudo apt install -y wallch
