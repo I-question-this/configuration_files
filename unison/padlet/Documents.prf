@@ -1,9 +1,10 @@
 # Unison preferences
 label = Just the needed documents from my desktop
 path = School
-path = Books
+path = Book
+path = Blender
 path = Documentation
-path = Mona
+path = Work
 path = temp
 path = MTG
 path = Papers
@@ -12,6 +13,7 @@ path = Personal
 path = Resume-ProfessionalStuff
 path = Finance
 path = Apartments
+path = ThunderBirdBackup
 root = /home/tyler/Documents
 root = ssh://tyler@westlandbros.com:23//home/tyler/Documents
 sshargs = -C
