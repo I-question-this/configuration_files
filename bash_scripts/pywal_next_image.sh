@@ -3,8 +3,9 @@
 # The -e option has to do with the exporting of the bash variables
 
 # Pick a random image from the specifed folder
-IMAGE_DIR=/home/tyler/Pictures/Wallpapers
-IMAGE=$(ls  $IMAGE_DIR| sort -R | tail -n 1)
+image_dir=/home/tyler/Pictures/Wallpapers
+image_name=$(ls  $image_dir| sort -R | tail -n 1)
+file_uri="file://$image_dir/$image_name"
 
 # Needed as crontab runs in a set of restricted variables
 PID=$(pgrep gnome-session | tail -n1)
@@ -15,7 +16,9 @@ DISPLAY=:0
 GSETTINGS_BACKEND=dconf
 
 # Change the background image manually as pywal is unable to do it in cron
-gsettings set org.gnome.desktop.background picture-uri "file://$IMAGE_DIR/$IMAGE"
+gsettings set org.gnome.desktop.background picture-uri $file_uri
+gsettings set org.gnome.desktop.screensaver picture-uri $file_uri
+
 
 # Run pywal to change the color scheme of the current theme
 # -g oomox to make gtk theme
