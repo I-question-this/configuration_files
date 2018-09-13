@@ -25,4 +25,4 @@ gsettings set org.gnome.desktop.screensaver picture-uri $file_uri
 # -q quiet
 # -n skip setting the wallpaper
 # -i path to the image
-/usr/bin/env python3 -m pywal -n -g -q -i $IMAGE_DIR/$IMAGE
+/usr/bin/env python3 -m pywal -n -g -q -i $image_dir/$image_uri
