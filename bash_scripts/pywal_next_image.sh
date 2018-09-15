@@ -5,7 +5,8 @@
 # Pick a random image from the specifed folder
 image_dir=/home/tyler/Pictures/Wallpapers
 image_name=$(ls  $image_dir| sort -R | tail -n 1)
-file_uri="file://$image_dir/$image_name"
+file_path=$image_dir/$image_name
+file_uri="file://$file_path"
 
 # Needed as crontab runs in a set of restricted variables
 PID=$(pgrep gnome-session | tail -n1)
@@ -25,4 +26,4 @@ gsettings set org.gnome.desktop.screensaver picture-uri $file_uri
 # -q quiet
 # -n skip setting the wallpaper
 # -i path to the image
-/usr/bin/env python3 -m pywal -n -g -q -i $image_dir/$image_uri
+/usr/bin/env python3 -m pywal -n -g -q -i $file_path
