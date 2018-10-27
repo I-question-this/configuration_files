@@ -20,6 +20,18 @@ GSETTINGS_BACKEND=dconf
 gsettings set org.gnome.desktop.background picture-uri $image_uri
 gsettings set org.gnome.desktop.screensaver picture-uri $image_uri
 
+# Determine best method of fitting based on image height and width
+width=$(identify -format "%w" "$image_path")> /dev/null
+height=$(identify -format "%h" "$image_path")> /dev/null
+
+if ((height > width)); then
+	image_fitting_option="scaled"
+else
+	image_fitting_option="stretched"
+fi
+
+gsettings set org.gnome.desktop.background picture-options $image_fitting_option
+gsettings set org.gnome.desktop.screensaver picture-options $image_fitting_option
 
 # Run pywal to change the color scheme of the current theme
 # -g oomox to make gtk theme
