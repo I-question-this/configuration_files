@@ -10,11 +10,7 @@ esac
 
 # Check if tmux is installed
 if which tmux >/dev/null 2>&1; then
-    # If not running interactively, do not do anything
-    # Probably not a nessecary check given the above check,
-    # but I wanted to keep it regardless for now.
-    [[ $- != *i* ]] && return
-    [[ -z "$TMUX" ]] && exec tmux
+    [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 fi
 
 
