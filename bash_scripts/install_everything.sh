@@ -76,6 +76,8 @@ sudo apt-get install nvidia-390
 # Snippet Tool
 sudo apt install shutter
 
+# Game Controller Drivers
+sudo apt-get install joystick jstest-gtk
 
 ## Downloaded Programs ##
 # Install Ardinio IDE
