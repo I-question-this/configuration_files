@@ -1,5 +1,5 @@
 # Unison preferences
 label = Music from my desktop
 root = /home/tyler/Music
-root = ssh://tyler@westlandbros.com:23//home/tyler/Music
+root = /media/tyler/BackupStorage/tyler_home/Music
 sshargs = -C

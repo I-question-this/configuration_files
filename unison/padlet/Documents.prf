@@ -15,5 +15,5 @@ path = Finance
 path = Apartments
 path = ThunderBirdBackup
 root = /home/tyler/Documents
-root = ssh://tyler@westlandbros.com:23//home/tyler/Documents
+root = /media/tyler/BackupStorage/tyler_home/Documents
 sshargs = -C
