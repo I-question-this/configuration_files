@@ -1,2 +1,3 @@
-. $BASH_SETTING_LOGIN_PIECES_DIR/wacom_finger_touch_settings
-. $BASH_SETTING_LOGIN_PIECES_DIR/pywal_terminal_colorscheme
+for piece in wacom_finger_touch_settings; do
+	. .bash_pieces/$piece
+done

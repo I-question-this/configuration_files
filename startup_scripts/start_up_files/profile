@@ -23,5 +23,4 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # This is like .bash_aliases, but more portable between setups and 
 # specifically for login shells
 # I don't make it an option because I want it to error if this is not set
-export BASH_SETTING_LOGIN_PIECES_DIR="/home/$USER/git/configuration_files/startup_scripts/login_pieces"
 . ~/.profile_setting_pieces
