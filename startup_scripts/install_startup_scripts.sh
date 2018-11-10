@@ -16,19 +16,11 @@ for file in $login_pieces $non_login_pieces; do
 	fi
 done
 
-# delete existing bashrc, bash_logout, profile
-rm -f $HOME/.bashrc
-rm -f $HOME/.bash_logout
-rm -f $HOME/.profile
 # make sym link to ours
-ln -s $(realpath start_up_files/bashrc) $HOME/.bashrc
-ln -s $(realpath start_up_files/bash_logout) $HOME/.bash_logout
-ln -s $(realpath start_up_files/profile) $HOME/.profile
-# delete sym link to correct pieces if they exist
-rm -f $HOME/.bash_setting_pieces
-rm -f $HOME/.profile_setting_pieces
-rm -f $HOME/.bash_pieces
+ln -s -f $(realpath start_up_files/bashrc) $HOME/.bashrc
+ln -s -f $(realpath start_up_files/bash_logout) $HOME/.bash_logout
+ln -s -f $(realpath start_up_files/profile) $HOME/.profile
 # make sym link to correct pieces
-ln -s $(realpath $bashrc_pieces) $HOME/.bash_setting_pieces
-ln -s $(realpath $profile_pieces) $HOME/.profile_setting_pieces
-ln -s $(realpath pieces) $HOME/.bash_pieces
+ln -s -f $(realpath $bashrc_pieces) $HOME/.bash_setting_pieces
+ln -s -f $(realpath $profile_pieces) $HOME/.profile_setting_pieces
+ln -s -f $(realpath pieces) $HOME/.bash_pieces
