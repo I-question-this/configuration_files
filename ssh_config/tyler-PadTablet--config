@@ -1,0 +1,10 @@
+Host raspberry
+	HostName raspberrypi.home
+	Port 22
+	User tyler
+	IdentityFile $HOME/.ssh/raspberry_pi
+
+Host git-raspberry
+	HostName raspberrypi.home
+	User git
+	IdentityFile $HOME/.ssh/git_raspberry_pi	
