@@ -2,12 +2,14 @@
 
 # The -e option has to do with the exporting of the bash variables
 
+## IMAGE SELECTION
 # Pick a random image from the specifed folder
 image_dir=/home/tyler/Pictures/Wallpapers
 image_name=$(ls  $image_dir| sort -R | tail -n 1)
 image_path=$image_dir/$image_name
 image_uri="file://$image_path"
 
+## BACKGROUND/LOCKSCREEN CHANGE
 # Needed as crontab runs in a set of restricted variables
 PID=$(pgrep gnome-session | tail -n1)
 export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
@@ -33,6 +35,23 @@ fi
 gsettings set org.gnome.desktop.background picture-options $image_fitting_option
 gsettings set org.gnome.desktop.screensaver picture-options $image_fitting_option
 
+## HTTP SERVER
+server_directory=/tmp/background_server
+# Make directory in /tmp for the server
+mkdir -p $server_directory
+# Copy image to a tempory file
+cp $image_path $server_directory/current_background
+# Only start http-server if it is not already running
+if ! ps -ef | grep $(which http-server) | grep -v grep; then
+	cd $server_directory
+	# -s : silient mode
+	http-server -s &
+	cd -
+fi
+
+which http-server > /tmp/which-http-server-log
+
+## PYWAL
 # Run pywal to change the color scheme of the current theme
 # -g oomox to make gtk theme
 # -q quiet
