@@ -45,8 +45,10 @@ cp $image_path $server_directory/current_background
 if ! ps -ef | grep  /usr/local/bin/http-server | grep -v grep; then
 	cd $server_directory
 	# -s : silient mode
-	# -c300 : limit cache to 300 seconds or 5 minutes
-	/usr/local/bin/http-server -s -c300 &
+	# -c60 : limit cache to 60 seconds or 1 minutes
+	# 	 It's a local server, so it's not costly
+	#        to pull the image.
+	/usr/local/bin/http-server -s -c60 &
 	cd -
 fi
 
