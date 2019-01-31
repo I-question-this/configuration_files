@@ -20,6 +20,7 @@ done
 ln -s -f $(realpath start_up_files/bashrc) $HOME/.bashrc
 ln -s -f $(realpath start_up_files/bash_logout) $HOME/.bash_logout
 ln -s -f $(realpath start_up_files/profile) $HOME/.profile
+ln -s -f $(realpath start_up_files/xinitrc) $HOME/.xinitrc
 # make sym link to correct pieces
 ln -s -f $(realpath $bashrc_pieces) $HOME/.bash_setting_pieces
 ln -s -f $(realpath $profile_pieces) $HOME/.profile_setting_pieces

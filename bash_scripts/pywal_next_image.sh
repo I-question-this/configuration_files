@@ -42,14 +42,13 @@ mkdir -p $server_directory
 # Copy image to a tempory file
 cp $image_path $server_directory/current_background
 # Only start http-server if it is not already running
-if ! ps -ef | grep $(which http-server) | grep -v grep; then
+if ! ps -ef | grep  /usr/local/bin/http-server | grep -v grep; then
 	cd $server_directory
 	# -s : silient mode
-	http-server -s &
+	# -c300 : limit cache to 300 seconds or 5 minutes
+	/usr/local/bin/http-server -s -c300 &
 	cd -
 fi
-
-which http-server > /tmp/which-http-server-log
 
 ## PYWAL
 # Run pywal to change the color scheme of the current theme
