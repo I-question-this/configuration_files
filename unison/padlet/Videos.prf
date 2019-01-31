@@ -1,0 +1,5 @@
+# Unison preferences
+label = All my beautiful pictures
+root = /home/tyler/Videoss
+root = /media/tyler/BackupStorage/tyler_home/Videos
+sshargs = -C

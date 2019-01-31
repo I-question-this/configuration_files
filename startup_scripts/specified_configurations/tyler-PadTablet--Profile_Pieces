@@ -1,3 +1,0 @@
-for piece in wacom_finger_touch_settings; do
-	. $HOME/.bash_pieces/$piece
-done

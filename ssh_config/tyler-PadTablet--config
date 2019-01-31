@@ -7,4 +7,9 @@ Host raspberry
 Host git-raspberry
 	HostName raspberrypi.home
 	User git
-	IdentityFile $HOME/.ssh/git_raspberry_pi	
+	IdentityFile $HOME/.ssh/git_raspberry_pi
+
+Host git-uc
+	HostName github.uc.edu
+	user git
+	IdentityFile $HOME/.ssh/github-uc

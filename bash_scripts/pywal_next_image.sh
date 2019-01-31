@@ -57,4 +57,4 @@ which http-server > /tmp/which-http-server-log
 # -q quiet
 # -n skip setting the wallpaper
 # -i path to the image
-/usr/bin/env python3 -m pywal -n -g -q -i $image_path
+/usr/bin/env python3 -m pywal -n  -q -i $image_path
