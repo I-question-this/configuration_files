@@ -48,7 +48,7 @@ if ! ps -ef | grep  /usr/local/bin/http-server | grep -v grep; then
 	# -c-1 : limit cache to none, i.e. turn the cache off.
 	# 	 It's a local server, so it's not costly
 	#        to pull the image.
-	/usr/local/bin/http-server -s -c60 &> $server_directory/log.txt &
+	/usr/local/bin/http-server -p 8181 -s -c60 &> $server_directory/log.txt &
 	cd -
 fi
 
