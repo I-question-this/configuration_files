@@ -42,7 +42,7 @@ mkdir -p $server_directory
 # Copy image to a tempory file
 cp $image_path $server_directory/current_background
 # Only start http-server if it is not already running
-if ! ps -ef | grep  /usr/local/bin/http-server | grep -v grep; then
+if ! ps -ef | grep -q  /usr/local/bin/http-server | grep -vq grep; then
 	cd $server_directory
 	# -s : silient mode
 	# -c-1 : limit cache to none, i.e. turn the cache off.
