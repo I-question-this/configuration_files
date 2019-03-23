@@ -1,3 +1,15 @@
+Host retropie-remote
+	HostName remote.home
+	Port 22
+	User discorddeveloper
+	IdentityFile $HOME/.ssh/RetroPie
+
+Host retropie-home
+	HostName retropie.home
+	Port 22
+	User discorddeveloper
+	IdentityFile $HOME/.ssh/RetroPie
+
 Host raspberry
 	HostName raspberrypi.home
 	Port 22
