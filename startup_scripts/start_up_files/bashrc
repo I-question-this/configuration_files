@@ -10,7 +10,7 @@ esac
 
 # Check if tmux is installed
 if which tmux >/dev/null 2>&1; then
-    [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+    [ -z "$TMUX"  ] && { exec tmux new-session && exit;}
 fi
 
 
