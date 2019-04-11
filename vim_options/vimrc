@@ -1,7 +1,7 @@
 " Set syntax on
 syntax on
 
-" Wrap text instead ov being on one line
+" Wrap text instead of being on one line
 set lbr
 
 " Turn on line numbering.
