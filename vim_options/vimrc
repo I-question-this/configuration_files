@@ -12,3 +12,10 @@ set shiftround
 
 " Set shiftwidth to 2 spaces
 set shiftwidth=2
+
+" Map - to moving a line down
+map - ddp
+
+" Uppercase a word in different modes
+imap <c-u> <esc>viwUi
+nmap <c-u> viwU<esc>
