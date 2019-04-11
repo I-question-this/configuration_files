@@ -6,3 +6,9 @@ set lbr
 
 " Turn on line numbering.
 set number
+
+" Turn on shift round
+set shiftround
+
+" Set shiftwidth to 2 spaces
+set shiftwidth=2
