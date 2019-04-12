@@ -1,24 +1,27 @@
-" Set syntax on
+" Variable Settings
+" Syntax
 syntax on
 
-" Wrap text instead of being on one line
+" Line settings
 set lbr
-
-" Turn on line numbering.
 set number
 
-" Turn on shift round
+" Shifting
 set shiftround
-
-" Set shiftwidth to 2 spaces
 set shiftwidth=2
+" End Variable Settings
 
-" Map - to moving a line down
+" Non-Leader Key Mappings
+" Line Movements
 noremap - ddp
-
-" Map _ to move a line up
 noremap _ ddkkp
-
 " Uppercase a word in different modes
 inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU<esc>
+" End Non-Leader Key Mappings
+
+" Leader Key Mappings
+let mapleader = ","
+" Example Leader Key Mapping
+nnoremap <localleader>d dd
+" End Leader Key Mappings
