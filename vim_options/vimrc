@@ -14,11 +14,11 @@ set shiftround
 set shiftwidth=2
 
 " Map - to moving a line down
-map - ddp
+noremap - ddp
 
 " Map _ to move a line up
-map _ ddkkp
+noremap _ ddkkp
 
 " Uppercase a word in different modes
-imap <c-u> <esc>viwUi
-nmap <c-u> viwU<esc>
+inoremap <c-u> <esc>viwUi
+nnoremap <c-u> viwU<esc>
