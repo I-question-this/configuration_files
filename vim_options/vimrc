@@ -16,6 +16,9 @@ set shiftwidth=2
 " Map - to moving a line down
 map - ddp
 
+" Map _ to move a line up
+map _ ddkkp
+
 " Uppercase a word in different modes
 imap <c-u> <esc>viwUi
 nmap <c-u> viwU<esc>
