@@ -17,5 +17,5 @@ cat > $config << END
   )
 END
 
-pkill -f devilspie
+pkill -fx devilspie
 devilspie &
