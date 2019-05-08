@@ -32,3 +32,16 @@ let mapleader = ","
 " Local Leader Key Mappings
 let maplocalleader = "\\"
 " End Local Leader Key Mappings
+
+" Abbreviations
+" Emails
+" Personal email
+:iabbrev @@p tylerofthewest@gmail.com
+" School email
+:iabbrev @@s westlatr@mail.uc.edu
+" Work email
+:iabbrev @@w westlatr@mail.uc.edu
+
+" Copyrights
+:iabbrev ccopy Copyright 2019 Tyler Westland, all rights reserved.
+" End Abbreviations
