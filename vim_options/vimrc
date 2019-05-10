@@ -27,6 +27,11 @@ let mapleader = ","
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " Source my Vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
+" Surrond the current word in quotes
+:nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+":vnoremap <leader>' `<<esc>a'<esc>`>i'<esc>
+" Surrond the current word in double quotes
+:nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 " End Leader Key Mappings
 
 " Local Leader Key Mappings
