@@ -1,4 +1,44 @@
+" Vundle
+set nocompatible " be iMproved, required for Vundle
+filetype off " reuired for Vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+" Code Completion
+" HTML, CSS, and JavaScript
+Plugin 'mattn/emmet-vim'
+" Code Linting
+Plugin 'w0rp/ale'
+" Colors
+Plugin 'dylanaraps/wal.vim'
+" Editor Configurations
+Plugin 'editorconfig/editorconfig-vim'
+" File Tree View
+Plugin 'scrooloose/nerdtree'
+" File Finding
+Plugin 'junegunn/fzf.vim'
+" Git Additions
+Plugin 'airblade/vim-gitgutter'
+" Multiple Cursors
+Plugin 'terryma/vim-multiple-cursors'
+" Utilities
+Plugin 'tpope/vim-eunuch'
+
+" All plugins must be added before the following line
+call vundle#end() " required
+filetype plugin indent on " required
+" End Vundle
+
+
 " Variable Settings
+" Colors
+colorscheme wal
 " Syntax
 syntax on
 
@@ -12,6 +52,8 @@ set shiftwidth=2
 " End Variable Settings
 
 " Non-Leader Key Mappings
+" File Finding
+noremap ; :Files<CR>
 " Line Movements
 nnoremap - ddp
 nnoremap _ ddkkp
