@@ -25,6 +25,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf.vim'
 " Git Additions
 Plugin 'airblade/vim-gitgutter'
+" LaTeX
+Plugin 'lervag/vimtex'
 " Multiple Cursors
 Plugin 'terryma/vim-multiple-cursors'
 " Utilities
@@ -39,8 +41,6 @@ filetype plugin indent on " required
 " Variable Settings
 " Colors
 colorscheme wal
-" Syntax
-syntax on
 
 " Line settings
 set lbr
@@ -49,6 +49,16 @@ set number
 " Shifting
 set shiftround
 set shiftwidth=2
+
+
+" Tex
+" Prevents vim from thinking a tex file is plaintex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+
+" Order and usage requested by vim-tex
+filetype plugin indent on
+syntax on
 " End Variable Settings
 
 " Non-Leader Key Mappings
