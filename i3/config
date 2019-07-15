@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8 
+font pango:monospace, Awesome 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -88,8 +88,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:I"
-set $ws2 "2:II"
+set $ws1 "1:"
+set $ws2 "2:"
 set $ws3 "3:III"
 set $ws4 "4:IV"
 set $ws5 "5:V"
@@ -108,11 +108,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
-# Messaging
 bindsym $mod+9 workspace $ws9
-# Password Manager
 bindsym $mod+0 workspace $ws10
-# exec if [ $(ps h -C keepassxc | wc -l) = 0]; exec then /usr/bin/keepassxc; exec fi
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
