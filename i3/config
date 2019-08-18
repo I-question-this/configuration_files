@@ -237,7 +237,21 @@ mode "$mode_display" {
 }
 bindsym $mod+x mode "$mode_display"
 
+set $mode_workspace_display Move to output on: (r) RIGHT, (l) LEFT, (a) ABOVE, (b) BELOW
+mode "$mode_workspace_display" {
+    bindsym r moveworkspace to output right, mode "default" 
+    bindsym l moveworkspace to output left, mode "default" 
+    bindsym a moveworkspace to output above, mode "default" 
+    bindsym b moveworkspace to output below, mode "default" 
+
+    # back to normal: Entor or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+shift+x mode "$mode_workspace_display"
+
 # Window transparency
 bindsym $mod+t exec devilspie_transparency_transset-df.sh
 # Change wallpaper
-bindxym $mod+shift+t exec change_background.sh
+bindsym $mod+shift+t exec change_background.sh
+
