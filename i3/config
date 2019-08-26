@@ -26,7 +26,6 @@ font pango:monospace, Awesome 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -132,6 +131,7 @@ assign [class="(?i)slack"] → $ws1
 assign [class="keepassxc"] → $ws2
 # Workspace 3: Reserach
 assign [class="Mendeley Desktop"] → $ws3
+assign [class="(?i)Zotero"] → $ws3
 # Workspace 4: Browsing
 assign [class="Firefox"] → $ws4
 # reload the configuration file
@@ -249,6 +249,20 @@ mode "$mode_workspace_display" {
     bindsym Escape mode "default"
 }
 bindsym $mod+shift+x mode "$mode_workspace_display"
+
+## Manual managment of main display rotation
+set $mode_rotation Rotate Screen (r) RIGHT, (l) LEFT, (n) NORMAL, (i) INVERTED
+mode "$mode_rotation" {
+    bindsym r exec --no-startup-id xrandr --output LVDS1 --auto --rotate right, mode "default" 
+    bindsym l exec --no-startup-id xrandr --output LVDS1 --auto --rotate left, mode "default" 
+    bindsym n exec --no-startup-id xrandr --output LVDS1 --auto --rotate normal, mode "default" 
+    bindsym i exec --no-startup-id xrandr --output LVDS1 --auto --rotate inverted, mode "default" 
+
+    # back to normal: Entor or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+shift+f mode "$mode_rotation"
 
 # Window transparency
 bindsym $mod+t exec devilspie_transparency_transset-df.sh
