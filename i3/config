@@ -253,10 +253,10 @@ bindsym $mod+shift+x mode "$mode_workspace_display"
 ## Manual managment of main display rotation
 set $mode_rotation Rotate Screen (r) RIGHT, (l) LEFT, (n) NORMAL, (i) INVERTED
 mode "$mode_rotation" {
-    bindsym r exec --no-startup-id xrandr --output LVDS1 --auto --rotate right, mode "default" 
-    bindsym l exec --no-startup-id xrandr --output LVDS1 --auto --rotate left, mode "default" 
-    bindsym n exec --no-startup-id xrandr --output LVDS1 --auto --rotate normal, mode "default" 
-    bindsym i exec --no-startup-id xrandr --output LVDS1 --auto --rotate inverted, mode "default" 
+    bindsym r exec --no-startup-id rotate_desktop.sh right, mode "default" 
+    bindsym l exec --no-startup-id rotate_desktop.sh left, mode "default" 
+    bindsym n exec --no-startup-id rotate_desktop.sh normal, mode "default" 
+    bindsym i exec --no-startup-id rotate_desktop.sh inverted, mode "default" 
 
     # back to normal: Entor or Escape
     bindsym Return mode "default"
