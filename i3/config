@@ -222,8 +222,8 @@ bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 ## Manual managment of external displays
-set $mode_display Ext Screen (r) VGA ON RIGHT, (l) VGA ON LEFT, (a) VGA ON ABOVE, (b) VGA ON BELOW, (s) VGA ON SAME, (x) VGA OFF
-mode "$mode_display" {
+set $mode_vga_display Extra Screen: VGA | (r) Right, (l) Left, (a) Above, (b) Below, (s) Same, (x) Off
+mode "$mode_vga_display" {
     bindsym r exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default" 
     bindsym l exec --no-startup-id xrandr --output VGA1 --auto --left-of LVDS1, mode "default" 
     bindsym a exec --no-startup-id xrandr --output VGA1 --auto --above-of LVDS1, mode "default" 
@@ -235,7 +235,23 @@ mode "$mode_display" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+x mode "$mode_display"
+bindsym $mod+x mode "$mode_vga_display"
+
+set $mode_dp_display Extra Screen: DP | (r) Right, (l) Left, (a) above, (b) below, (s) Same, (x) Off
+
+mode "$mode_dp_display" {
+    bindsym r exec --no-startup-id xrandr --output DP1 --auto --right-of LVDS1, mode "default" 
+    bindsym l exec --no-startup-id xrandr --output DP1 --auto --left-of LVDS1, mode "default" 
+    bindsym a exec --no-startup-id xrandr --output DP1 --auto --above-of LVDS1, mode "default" 
+    bindsym b exec --no-startup-id xrandr --output DP1 --auto --below-of LVDS1, mode "default" 
+    bindsym s exec --no-startup-id xrandr --output DP1 --auto --same-as  LVDS1, mode "default" 
+    bindsym x exec --no-startup-id xrandr --output DP1 --auto --off, mode "default"
+
+    # back to normal: Entor or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+shift+x mode "$mode_dp_display"
 
 set $mode_workspace_display Move to output on: (r) RIGHT, (l) LEFT, (a) ABOVE, (b) BELOW
 mode "$mode_workspace_display" {
@@ -248,7 +264,7 @@ mode "$mode_workspace_display" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+shift+x mode "$mode_workspace_display"
+bindsym $mod+m mode "$mode_workspace_display"
 
 ## Manual managment of main display rotation
 set $mode_rotation Rotate Screen (r) RIGHT, (l) LEFT, (n) NORMAL, (i) INVERTED
