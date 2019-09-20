@@ -73,7 +73,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Put ~/.bin into the PATH variable
-export PATH=$PATH:/home/$USER/.bin
+export PATH=$PATH:$HOME/.bin
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -85,3 +85,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Setup GoPath
+export GOPATH=$HOME/gopath
+export PATH=$PATH:$GOPATH:$GOPATH/bin
