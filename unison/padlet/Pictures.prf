@@ -1,5 +1,5 @@
 # Unison preferences
-label = All my beautiful pictures
+label = Pictures: Padlet <-> biggamer
 root = /home/tyler/Pictures
-root = /media/tyler/BackupStorage/tyler_home/Pictures
+root = ssh://tyler@biggamer.apartment.home//home/tyler/Pictures
 sshargs = -C

@@ -1,5 +1,5 @@
 # Unison preferences
-label = Computer Science nerd stuff!!
+label = Development: Padlet <-> biggamer
 root = /home/tyler/Development
-root = /media/tyler/BackupStorage/tyler_home/Development
+root = ssh://tyler@biggamer.apartment.home//home/tyler/Development
 sshargs = -C

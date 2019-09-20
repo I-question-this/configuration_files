@@ -1,5 +1,5 @@
 # Unison preferences
-label = Game Saves and Installations
+label = Games: Padlet <-> biggamer
 root = /home/tyler/Games
-root = ssh://tyler@westlandbros.com:23//home/tyler/Games
+root = ssh://tyler@biggamer.apartment.home//home/tyler/Games
 sshargs = -C

@@ -1,7 +1,5 @@
 # Unison preferences
-label = VirtualMachines that I think are worth having on my laptop
-path = VirtualBox_VMs/Tiny_Windows
-path = VirtualBox_Shared_Folders
-root = /home/tyler
-root = /media/tyler/BackupStorage/tyler_home
+label = VirtualBox: Padlet <-> biggamer
+root = /home/tyler/VirtualBox
+root = ssh://tyler@biggamer.apartment.home//home/tyler/VirtualBox
 sshargs = -C

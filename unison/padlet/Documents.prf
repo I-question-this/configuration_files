@@ -1,19 +1,5 @@
 # Unison preferences
-label = Just the needed documents from my desktop
-path = School
-path = Book
-path = Blender
-path = Documentation
-path = Work
-path = temp
-path = MTG
-path = Papers
-path = logs
-path = Personal
-path = Resume-ProfessionalStuff
-path = Finance
-path = Apartments
-path = ThunderBirdBackup
+label = Development: Padlet <-> biggamer
 root = /home/tyler/Documents
-root = /media/tyler/BackupStorage/tyler_home/Documents
+root = ssh://tyler@biggamer.apartment.home//home/tyler/Documents
 sshargs = -C
