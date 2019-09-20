@@ -89,3 +89,7 @@ fi
 # Setup GoPath
 export GOPATH=$HOME/gopath
 export PATH=$PATH:$GOPATH:$GOPATH/bin
+
+# Source fonts from awesome-terminal-fonts
+source $HOME/.fonts/*.sh
+
