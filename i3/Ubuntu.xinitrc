@@ -11,3 +11,7 @@ exec discord &
 exec slack &
 # Password Management
 exec keepassxc &
+# Window compositor (for transparency)
+exec compton &
+# Program for applying special rules for what is and isn't transparent
+exec devilspie -a &
