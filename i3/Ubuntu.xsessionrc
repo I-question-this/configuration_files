@@ -3,7 +3,7 @@
 # Color Scheme
 exec wal --vte -R &
 # Document Management
-exec $HOME/.applications/zotero/zotero &
+exec zotero &
 # Lock Screen
 # exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
 # Messaging
@@ -11,6 +11,8 @@ exec discord &
 exec slack &
 # Password Management
 exec keepassxc &
+# Web browsing
+exec firefox &
 # Window compositor (for transparency)
 exec compton &
 # Program for applying special rules for what is and isn't transparent
