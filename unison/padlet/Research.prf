@@ -1,0 +1,5 @@
+# Unison preferences
+label = Research: Padlet <-> dracarys
+root = /home/tyler/Documents/Research/UC
+root = ssh://tylerwestland@dracarys.mindlab.uc.edu//home/tylerwestland/Documents/Research
+sshargs = -C
