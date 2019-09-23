@@ -1,0 +1,5 @@
+# Unison preferences
+label = Zotero: Padlet <-> dracarys
+root = /home/tyler/Zotero
+root = ssh://tylerwestland@dracarys.mindlab.uc.edu//home/tylerwestland/Zotero
+sshargs = -C
