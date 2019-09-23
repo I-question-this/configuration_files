@@ -1,5 +1,0 @@
-# Unison preferences
-label = (Google) Drive: Padlet <-> biggamer
-root = /home/tyler/Drive
-root = ssh://tyler@biggamer.apartment.home//home/tyler/Drive
-sshargs = -C
