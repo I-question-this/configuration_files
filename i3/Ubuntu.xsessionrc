@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Color Scheme
-exec wal -R &
+exec wal --vte -R &
 # Document Management
-exec $HOME/.applications/zotero/zotero
+exec $HOME/.applications/zotero/zotero &
 # Lock Screen
 # exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
 # Messaging
