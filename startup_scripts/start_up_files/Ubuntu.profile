@@ -25,5 +25,8 @@ fi
 export GOPATH=$HOME/gopath
 export PATH=$PATH:$GOPATH:$GOPATH/bin
 
+# Set Android path
+export PATH=${PATH}:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
+
 # Start ssh-agent
 eval $(keychain --eval -q)
