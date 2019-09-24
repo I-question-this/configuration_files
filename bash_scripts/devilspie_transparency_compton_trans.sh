@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# NOTE: Needs xcompmgr to be running
+# NOTE: Needs compton to be running
 
 config=$HOME/.devilspie/transparency_config.ds
 
