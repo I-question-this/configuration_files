@@ -1,0 +1,2 @@
+# Make gnome-keyring stop hogging the ssh keys
+GSM_SKIP_SSH_AGENT_WORKAROUND DEFAULT=1
