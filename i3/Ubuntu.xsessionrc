@@ -5,7 +5,7 @@ exec wal --vte -R &
 # Document Management
 exec zotero &
 # Lock Screen
-# exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
+exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
 # Messaging
 exec discord &
 exec slack &
