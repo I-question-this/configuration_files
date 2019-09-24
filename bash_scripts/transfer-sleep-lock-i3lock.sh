@@ -6,7 +6,7 @@
 ## CONFIGURATION ##############################################################
 
 # Options to pass to i3lock
-i3lock_options="-i $(pixelated_screenshot.sh)"
+i3lock_options="-i $($HOME/.bin/pixelated_screenshot.sh)"
 
 # Run before starting the locker
 pre_lock() {
