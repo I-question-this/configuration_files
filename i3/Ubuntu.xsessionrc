@@ -3,6 +3,7 @@
 # Color Scheme
 exec wal --vte -R &
 # Document Management
+exec dropbox &
 exec zotero &
 # Lock Screen
 exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
