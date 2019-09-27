@@ -52,8 +52,7 @@ function do_rotate
   esac
 }
 
-#XDISPLAY=`xrandr --current | grep primary | sed -e 's/ .*//g'`
-XDISPLAY='LVDS-1'
+XDISPLAY=`xrandr --current | grep primary | sed -e 's/ .*//g'`
 XROT=`xrandr --current --verbose | grep primary | egrep -o ' (normal|left|inverted|right) '`
 
 do_rotate $XDISPLAY $1
