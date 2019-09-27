@@ -12,8 +12,8 @@
 
 # Configure these to match your hardware (names taken from `xinput` output).
 TOUCHPAD='SynPS/2 Synaptics TouchPad'
-TOUCHSCREENPEN='Wacom ISDv4 E6 Pen Pen (0)'
-TOUCHSCREENFINGER='Wacom ISDv4 E6 Finger'
+TOUCHSCREENPEN='Wacom ISDv4 E6 Pen stylus'
+TOUCHSCREENFINGER='Wacom ISDv4 E6 Finger touch'
 
 if [ -z "$1" ]; then
   echo "Missing orientation."
@@ -53,7 +53,7 @@ function do_rotate
 }
 
 #XDISPLAY=`xrandr --current | grep primary | sed -e 's/ .*//g'`
-XDISPLAY='LVDS1'
+XDISPLAY='LVDS-1'
 XROT=`xrandr --current --verbose | grep primary | egrep -o ' (normal|left|inverted|right) '`
 
 do_rotate $XDISPLAY $1
