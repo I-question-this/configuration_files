@@ -29,8 +29,8 @@ volume master {
 }
 
 wireless _first_ {
-  format_up = "W: (%quality at %essid) %ip"
-  format_down = "W: down"
+  format_up = "📡: (%quality at %essid) %ip"
+  format_down = "📡: down"
 }
 
 ethernet _first_ {
@@ -44,15 +44,15 @@ battery all {
 }
 
 disk "/" {
-  format = "/: %used/%total"
+  format = "💽: %used/%total"
 }
 
 load {
-  format = "Load: %1min"
+  format = ": %1min"
 }
 
 memory {
-  format = "RAM: %used/%total"
+  format = "💭: %used/%total"
   threshold_degraded = "1G"
   format_degraded = "MEMORY < %available"
 }
