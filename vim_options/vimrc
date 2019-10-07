@@ -66,6 +66,10 @@ let g:vimtex_view_method='zathura'
 " Order and usage requested by vim-tex
 filetype plugin indent on
 syntax on
+
+" Clipboard settings
+set clipboard=unnamed
+
 " End Variable Settings
 
 " Non-Leader Key Mappings
@@ -109,3 +113,4 @@ let maplocalleader = "\\"
 " Copyrights
 :iabbrev ccopy Copyright 2019 Tyler Westland, all rights reserved.
 " End Abbreviations
+
