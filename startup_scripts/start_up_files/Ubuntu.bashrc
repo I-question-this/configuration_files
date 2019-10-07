@@ -120,6 +120,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Source fonts from awesome-terminal-fonts
-source $HOME/.fonts/*.sh
