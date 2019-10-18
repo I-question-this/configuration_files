@@ -48,6 +48,10 @@ colorscheme wal
 set lbr
 set number
 
+" Spell Check
+set spelllang=en
+set spell
+
 " Tab width
 " On pressing tab, insert 2 spaces
 set expandtab
