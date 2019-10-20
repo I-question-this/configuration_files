@@ -43,6 +43,8 @@ filetype plugin indent on " required
 " Variable Settings
 " Colors
 colorscheme wal
+" Sets comments to be a noticeably different color.
+set t_Co=256
 
 " Line settings
 set lbr
