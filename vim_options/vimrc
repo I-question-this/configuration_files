@@ -118,5 +118,9 @@ let maplocalleader = "\\"
 
 " Copyrights
 :iabbrev ccopy Copyright 2019 Tyler Westland, all rights reserved.
+
+" LaTeX
+:iabbrev bitzm \begin{itemize}
+:iabbrev benmr \begin{enumerate}
 " End Abbreviations
 
