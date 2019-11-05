@@ -1,0 +1,4 @@
+#!/bin/sh
+# Motivate refers to this program https://github.com/mubaris/motivate/tree/master/motivate
+
+/usr/games/cowsay "$(/opt/motivate/motivate/motivate.py)"
