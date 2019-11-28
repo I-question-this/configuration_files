@@ -26,6 +26,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
 " File Finding
 Plugin 'junegunn/fzf.vim'
+" Hex Editing
+Plugin 'fidian/hexmode'
 " Git Additions
 Plugin 'airblade/vim-gitgutter'
 " LaTeX
