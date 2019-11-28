@@ -1,6 +1,6 @@
 " Vundle
-set nocompatible " be iMproved, required for Vundle
-filetype off " reuired for Vundle
+set nocompatible " required for Vundle
+filetype off " required for Vundle
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
+" Many of these found at vimawesome.com
 " Code Completion
 " HTML, CSS, and JavaScript
 Plugin 'mattn/emmet-vim'
