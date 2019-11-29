@@ -120,3 +120,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Source the fzf files, if installed.
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -42,6 +42,8 @@ call vundle#end() " required
 filetype plugin indent on " required
 " End Vundle
 
+" Required since I have fzf installed in an unexpected place
+source /opt/fzf/plugin/fzf.vim
 
 " Variable Settings
 " Colors
