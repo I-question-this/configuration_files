@@ -71,13 +71,16 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+# Set the title to user@host:dir
+
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -85,11 +88,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Pywal color settings
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -99,15 +98,6 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -120,5 +110,72 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Alias definitions.
+# More specific but portable settings go here
+# It is recommended to not make modifications to this file
+# and instead add to the .bash_aliases file but that 
+# makes it more difficult to maintain for different systems
+# Instead all matching configurations are in this file, and
+# differing configurations are added to this directory.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+if [ -d ~/.bash_aliases ]; then
+  for al in $(ls ~/.bash_aliases); do
+    . ~/.bash_aliases/$al
+  done
+fi
+
+# Android
+export PATH=${PATH}:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
+
+# fzf
 # Source the fzf files, if installed.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# G3D
+G3D_DIR=/home/tyler/G3D9
+export PATH=$PATH:$G3D_DIR/bin
+export CPATH=$CPATH:$G3D_DIR/include
+export LIBRARY_PATH=$LIBRARY_PATH:$G3D_DIR/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$G3D_DIR/lib
+export G3D9DATA=$G3D_DIR/G3D/data
+alias g3dRun="./build/*"
+alias icompileR="icompile;g3dRun"
+
+# Git
+alias gitSubmoduleUpdate="git submodule update --checkout"
+alias gitCommit="git pull; git commit"
+alias gitMeld="git mergetool -t meld"
+
+# GoPath
+export GOPATH=$HOME/gopath
+export PATH=$PATH:$GOPATH:$GOPATH/bin
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ocaml
+export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
+# OPAM Configuration
+. /home/tyler/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# Python
+# Add local 'pip' to PATH:
+# (In your .bashrc, .zshrc etc)
+export PATH="${PATH}:${HOME}/.local/bin/"
+
+# Pywal
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
+# Task Warrior
+alias taskUnBlocked="task +UNBLOCKED next"
+alias taskFocused="task +UNBLOCKED -Unnecessary next"
+
+# Random Utilities
+alias all_users="cut -d: -f1 /etc/passwd"
+alias folder_size="du -hcs"
+alias istheinternetonfire="dig +short -t txt istheinternetonfire.com"
+alias recursive_touch="find . -exec touch {} \;"
+

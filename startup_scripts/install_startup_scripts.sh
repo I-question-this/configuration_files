@@ -1,27 +1,27 @@
 #!/bin/bash
 
-# save variables for this hostname's pieces configuration
-# bashrc is for interactive nonlogin shells and login shells (by being called in profile)
-bashrc_pieces=specified_configurations/$(hostname)--Bashrc_Pieces
-# profile is for login shells only
-profile_pieces=specified_configurations/$(hostname)--Profile_Pieces
+if [ -z $1 ]; then
+  echo "Usage: $(basename $0) <system type>"
+  exit 1
+fi
 
-# make sure that pieces exist for this hostname
-for file in $login_pieces $non_login_pieces; do
-	if [[ ! -e  $file ]]; then
-		echo $file does not exist
-		exit -1
-	else
-		echo file exists
-	fi
-done
+ln -f bashrc $HOME/.bashrc
+ln -f bash_logout $HOME/.bash_logout
+ln -f profile $HOME/.profile
 
-# make sym link to ours
-ln -s -f $(realpath start_up_files/bashrc) $HOME/.bashrc
-ln -s -f $(realpath start_up_files/bash_logout) $HOME/.bash_logout
-ln -s -f $(realpath start_up_files/profile) $HOME/.profile
-ln -s -f $(realpath start_up_files/xinitrc) $HOME/.xinitrc
-# make sym link to correct pieces
-ln -s -f $(realpath $bashrc_pieces) $HOME/.bash_setting_pieces
-ln -s -f $(realpath $profile_pieces) $HOME/.profile_setting_pieces
-ln -s -f $(realpath pieces) $HOME/.bash_pieces
+rm -rf ~/.bash_aliases
+mkdir ~/.bash_aliases
+
+# Make single file links
+if [ "Ubuntu" = $1 ]; then
+  ln -f Ubuntu/pam_environment $HOME/.pam_environment
+  ln -f Ubuntu/xsessionrc $HOME/.xsessionrc
+  exit 0
+elif [ "Arch" = $1 ]; then
+  ln -f Arch/xinitrc $HOME/.xinitrc
+  exit 0
+else
+  echo "$1 is not a valid system name. Please select Ubuntu or Arch"
+  exit 1
+fi
+
