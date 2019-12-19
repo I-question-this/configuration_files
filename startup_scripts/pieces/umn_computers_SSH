@@ -1,8 +1,0 @@
-# ALIASES
-alias apollo="ssh -Y westl170@apollo.cselabs.umn.edu"
-
-# Keller 1-250
-for i in {01..37}
-do
-        alias k1250-$i="ssh -Y westl170@csel-kh1250-$i.cselabs.umn.edu"
-done

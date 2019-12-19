@@ -1,2 +1,0 @@
-# ALIASES
-alias cpplint="python ~/git/cpp_styleguide/cpplint/cpplint.py"

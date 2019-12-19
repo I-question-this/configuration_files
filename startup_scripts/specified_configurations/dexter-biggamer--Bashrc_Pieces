@@ -1,3 +1,0 @@
-for piece in fzf Git random_utilities pywal_terminal_colorscheme; do
-	. $HOME/.bash_pieces/$piece
-done

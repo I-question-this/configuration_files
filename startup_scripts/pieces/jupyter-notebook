@@ -1,5 +1,0 @@
-# Screen process for jupyter notebook
-# Automtically create a screen dedicated to running jupyter notebook
-if ! $(screen -ls | grep -Fq jupyter-notebook); then
-	screen -S jupyter-notebook -d -m
-fi
