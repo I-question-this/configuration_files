@@ -1,0 +1,5 @@
+# Unison preferences
+label = Rawdog: Padlet <-> biggamer
+root = /home/tyler/.rawdog
+root = ssh://tyler@biggamer.apartment.home//home/tyler/.rawdog
+sshargs = -C
