@@ -127,6 +127,10 @@ fi
 # Android
 export PATH=${PATH}:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
 
+# Daily Notes
+alias openDailyNote="/home/$USER/Documents/DailyNotes/bin/openDailyNote.sh /home/$USER/Documents/DailyNotes"
+alias dailyNotePath="/home/$USER/Documents/DailyNotes/bin/dailyNotePath.sh /home/$USER/Documents/DailyNotes"
+
 # fzf
 # Source the fzf files, if installed.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
