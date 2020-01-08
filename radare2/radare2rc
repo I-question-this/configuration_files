@@ -1,3 +1,5 @@
 e cfg.editor=vim
 e io.cache=true
 e io.cache.write=true
+e prj.files=true
+e prj.git=true
