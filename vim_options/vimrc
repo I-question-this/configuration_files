@@ -36,6 +36,8 @@ Plugin 'lervag/vimtex'
 Plugin 'terryma/vim-multiple-cursors'
 " Utilities
 Plugin 'tpope/vim-eunuch'
+" Syntax Highlighting
+Plugin 's3rvac/vim-syntax-retdecdsm'
 
 " All plugins must be added before the following line
 call vundle#end() " required
