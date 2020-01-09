@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 " Code Linting
 Plugin 'w0rp/ale'
+Plugin 'tjdevries/overlength.vim'
 " Code Commenting Out
 Plugin 'scrooloose/nerdcommenter'
 " Colors
