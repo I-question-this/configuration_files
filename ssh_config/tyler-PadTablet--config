@@ -1,29 +1,30 @@
-Host retropie-remote
-	HostName remote.home
-	Port 22
-	User discorddeveloper
-	IdentityFile $HOME/.ssh/RetroPie
+# General
+AddKeysToAgent yes
 
-Host retropie-home
-	HostName retropie.home
-	Port 22
-	User discorddeveloper
-	IdentityFile $HOME/.ssh/RetroPie
+host github
+  IdentityFile ~/.ssh/github
+  User git
+  Hostname github.com
 
-Host raspberry
-	HostName raspberrypi.home
-	Port 22
-	User tyler
-        # For VNC
-	LocalForward 5901 localhost:5900
-	IdentityFile $HOME/.ssh/raspberry_pi
+# Host specific
+host biggamer
+  ForwardAgent yes
+  IdentityFile ~/.ssh/dexter-biggamer
+  User tyler
+  Hostname biggamer.apartment.home
 
-Host git-raspberry
-	HostName raspberrypi.home
-	User git
-	IdentityFile $HOME/.ssh/git_raspberry_pi
+host retropie
+  User pi
+  Hostname retropie.apartment.home
 
-Host git-uc
-	HostName github.uc.edu
-	user git
-	IdentityFile $HOME/.ssh/github-uc
+host dracarys
+  ForwardAgent yes
+  IdentityFile ~/.ssh/dracarys
+  User tylerwestland
+  Hostname dracarys.mindlab.uc.edu
+
+host metasploitable
+  User msfadmin
+  Hostname 192.168.56.102
+  Port 22
+  ProxyCommand ssh -q -W %h:%p biggamer
