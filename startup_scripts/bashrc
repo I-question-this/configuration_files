@@ -185,3 +185,6 @@ alias folder_size="du -hcs"
 alias istheinternetonfire="dig +short -t txt istheinternetonfire.com"
 alias recursive_touch="find . -exec touch {} \;"
 
+alias snoob="snoob --intel"
+alias snoob_to_opcode="snoob --intel -i --to-opcode"
+
