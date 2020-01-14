@@ -17,9 +17,9 @@ function start_vm_headless () {
   fi
 }
 
-function poweroff_vm () {
+function power_off_vm () {
   if $(is_vm_running $1); then
-    VBoxManage controlvm $1 ascpipowerbutton;
+    VBoxManage controlvm $1 acpipowerbutton;
   fi
 }
 
