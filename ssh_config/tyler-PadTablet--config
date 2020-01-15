@@ -25,6 +25,13 @@ host dracarys
 
 host metasploitable
   User msfadmin
-  Hostname 192.168.56.102
+  Hostname metasploitable.biggamer.apartment.home
   Port 22
   ProxyCommand ssh -q -W %h:%p biggamer
+
+host kali
+  User root
+  Hostname kali.biggamer.apartment.home
+  Port 22
+  ProxyCommand ssh -q -W %h:%p biggamer
+
