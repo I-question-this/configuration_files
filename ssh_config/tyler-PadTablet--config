@@ -32,6 +32,6 @@ host metasploitable
 host kali
   User root
   Hostname kali.biggamer.apartment.home
-  Port 22
+  Port 2222
   ProxyCommand ssh -q -W %h:%p biggamer
 
