@@ -154,6 +154,11 @@ alias gitMeld="git mergetool -t meld"
 export GOPATH=$HOME/gopath
 export PATH=$PATH:$GOPATH:$GOPATH/bin
 
+# metasm
+metasm_path=$HOME/Development/Ruby/metasm/samples
+alias disassemble="ruby $metasm_path/disassemble.rb"
+alias elfencode="ruby $metasm_path/elfencode.rb"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -177,7 +182,7 @@ fi
 
 # Task Warrior
 alias taskUnBlocked="task +UNBLOCKED next"
-alias taskFocused="task +UNBLOCKED -Unnecessary next"
+alias taskFocused="task +UNBLOCKED -Hobby next"
 
 # Random Utilities
 alias all_users="cut -d: -f1 /etc/passwd"
