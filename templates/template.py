@@ -7,7 +7,7 @@ import argparse
 import os
 
 def parse_arguments(args=None):
-    """Main function of this file
+    """Returns the parsed arguments.
 
     Arguments:
     args: List of strings to be parsed by argparse.
