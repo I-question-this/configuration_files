@@ -8,4 +8,4 @@ alias simpleHTTPServer="python2 -m SimpleHTTPServer"
 
 # nohup -- Make it quiet.
 # disown -- Make it not die with when the terminal is closed.
-function independent_child () { nohup $@ & disown }
+function independent_child () { nohup $@ &> /dev/null & disown }
