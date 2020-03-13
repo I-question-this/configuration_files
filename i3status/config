@@ -16,6 +16,7 @@ order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
+order += "disk /home"
 order += "load"
 order += "memory"
 order += "tztime local"
@@ -29,13 +30,13 @@ volume master {
 }
 
 wireless _first_ {
-  format_up = "📡: (%quality at %essid) %ip"
-  format_down = "📡: down"
+  format_up = ": (%quality at %essid) %ip"
+  format_down = ": down"
 }
 
 ethernet _first_ {
-  format_up = "E: %ip (%speed)"
-  format_down = "E: down"
+  format_up = ": %ip (%speed)"
+  format_down = ": down"
 }
 
 battery all {
@@ -44,11 +45,15 @@ battery all {
 }
 
 disk "/" {
-  format = "💽: %used/%total"
+  format = ": %used/%total"
+}
+
+disk "/home" {
+  format = ": %used/%total"
 }
 
 load {
-  format = "💭: %1min"
+  format = ": %1min"
 }
 
 memory {
