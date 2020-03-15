@@ -24,3 +24,5 @@ fi
 # Start ssh-agent
 eval $(keychain --eval -q)
 
+# Ruby path
+export RUBYLIB=$RUBYLIB:$HOME/Development/Ruby/metasm
