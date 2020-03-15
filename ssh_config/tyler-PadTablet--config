@@ -20,6 +20,7 @@ host retropie
 host dracarys
   ForwardAgent yes
   IdentityFile ~/.ssh/dracarys
+  LocalForward 8989 localhost:80
   User tylerwestland
   Hostname dracarys.mindlab.uc.edu
 
