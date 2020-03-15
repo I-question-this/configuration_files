@@ -1,0 +1,5 @@
+# Unison preferences
+label = VirtualBox: Padlet <-> dracarys
+root = /home/tyler/VirtualBox
+root = ssh://tylerwestland@dracarys.mindlab.uc.edu//home/tylerwestland/VirtualBox
+sshargs = -C
