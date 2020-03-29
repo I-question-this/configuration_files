@@ -2,6 +2,7 @@
 
 # Set up the .zshrc
 ln -s -f $(realpath .zshrc) $HOME
+ln -s -f $(realpath .zprofile) $HOME
 
 # Ask about installing each file in 'custom'
 echo "Select which customs to install"
