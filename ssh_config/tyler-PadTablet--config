@@ -10,6 +10,8 @@ host github
 host biggamer
   ForwardAgent yes
   IdentityFile ~/.ssh/dexter-biggamer
+  # Folding@Home
+  LocalForward 7396 localhost:7396
   User tyler
   Hostname biggamer.apartment.home
 
@@ -20,7 +22,10 @@ host retropie
 host dracarys
   ForwardAgent yes
   IdentityFile ~/.ssh/dracarys
+  # phpMyAdmin
   LocalForward 8989 localhost:80
+  # Folding@Home
+  LocalForward 7396 localhost:7397
   User tylerwestland
   Hostname dracarys.mindlab.uc.edu
 
