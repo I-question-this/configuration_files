@@ -38,19 +38,16 @@ exec xss-lock -- ~/.bin/transfer-sleep-lock-i3lock.sh &
 exec ~/.fehbg &
 # Browsing
 exec firefox &
-# Dropbox
-exec dropbox &
 # Messaging
-exec discord-ptb &
-exec slack &
+exec discord &
 # Reading
-exec mendeleydesktop &
+exec zotero &
 # Security
 exec keepassxc &
 # Color Scheme
 exec wal -R &
 # Window editor (for transparency)
-exec xcompmgr &
+exec compton &
 # Program for applying special rules for what is and isn't transparent
 exec devilspie -a &
 # The actual window manager
