@@ -2,4 +2,4 @@
 label = Pictures: Padlet <-> biggamer
 root = /home/tyler/Pictures
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Pictures
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

@@ -2,4 +2,4 @@
 label = Zotero: Padlet <-> biggamer
 root = /home/tyler/Zotero
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Zotero
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

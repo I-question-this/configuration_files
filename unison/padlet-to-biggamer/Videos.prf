@@ -2,4 +2,4 @@
 label = Videos: Padlet <-> biggamer
 root = /home/tyler/Videos
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Videos
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

@@ -2,4 +2,4 @@
 label = Templates: Padlet <-> biggamer
 root = /home/tyler/Templates
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Templates
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

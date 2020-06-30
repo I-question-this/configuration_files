@@ -2,4 +2,4 @@
 label = Music: Padlet <-> biggamer
 root = /home/tyler/Music
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Music
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

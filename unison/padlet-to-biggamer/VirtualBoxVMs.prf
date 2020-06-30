@@ -2,4 +2,4 @@
 label = VirtualBox: Padlet <-> biggamer
 root = /home/tyler/VirtualBox
 root = ssh://tyler@biggamer.apartment.home//home/tyler/VirtualBox
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

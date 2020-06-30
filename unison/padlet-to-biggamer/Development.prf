@@ -1,5 +1,7 @@
 # Unison preferences
 label = Development: Padlet <-> biggamer
+follow = Path Development/DiscordPlays
+follow = Path Development/DiscordPlays--Development
 root = /home/tyler/Development
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Development
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer

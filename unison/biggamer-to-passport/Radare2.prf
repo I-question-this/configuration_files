@@ -1,0 +1,4 @@
+# Unison preferences
+label = Radare2: BigGamer <-> passport
+root = /home/tyler/.local/share/radare2
+root = /mnt/passport/local-share-radare2
