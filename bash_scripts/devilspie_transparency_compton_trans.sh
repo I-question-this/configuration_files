@@ -14,7 +14,7 @@ fi
 
 cat > $config << END
   (begin
-    (spawn_async (str "compton-trans -w " (window_xid) " $transparency"))
+    (spawn_async (str "picom-trans -w " (window_xid) " $transparency"))
   )
 END
 
