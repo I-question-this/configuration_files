@@ -127,7 +127,7 @@ let maplocalleader = "\\"
 :iabbrev @@w westlatr@mail.uc.edu
 
 " Copyrights
-:iabbrev ccopy Copyright 2019 Tyler Westland, all rights reserved.
+:iabbrev ccopy Copyright 2020 Tyler Westland, all rights reserved.
 
 " LaTeX
 :iabbrev bitzm \begin{itemize}
