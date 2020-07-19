@@ -1,3 +1,4 @@
+set encoding=utf-8
 " Vundle
 set nocompatible " required for Vundle
 filetype off " required for Vundle
@@ -47,9 +48,6 @@ call vundle#end() " required
 filetype plugin indent on " required
 " End Vundle
 
-" Required since I have fzf installed in an unexpected place
-source $HOME/fzf/plugin/fzf.vim
-
 " Variable Settings
 " Colors
 colorscheme wal
@@ -97,6 +95,8 @@ nnoremap _ ddkkp
 " Uppercase a word in different modes
 inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU<esc>
+" Line deletion
+inoremap <c-d> <esc>ddi
 " End Non-Leader Key Mappings
 
 " Leader Key Mappings
