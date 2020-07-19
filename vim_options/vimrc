@@ -86,21 +86,20 @@ set clipboard=unnamed
 
 " End Variable Settings
 
-" Non-Leader Key Mappings
-" File Finding
-noremap ; :Files<CR>
-" Line Movements
-nnoremap - ddp
-nnoremap _ ddkkp
-" Uppercase a word in different modes
-inoremap <c-u> <esc>viwUi
-nnoremap <c-u> viwU<esc>
-" Line deletion
-inoremap <c-d> <esc>ddi
-" End Non-Leader Key Mappings
-
 " Leader Key Mappings
 let mapleader = ","
+" Restore normal mapping
+:nnoremap <leader>, ,
+" File Finding
+noremap <leader>; :Files<CR>
+" Line Movements
+nnoremap <leader>- ddp
+nnoremap <leader>_ ddkkp
+" Uppercase a word in different modes
+inoremap <leader><c-u> <esc>viwUi
+nnoremap <leader><c-u> viwU<esc>
+" Line deletion
+inoremap <leader><c-d> <esc>ddi
 " Making it easier to make it easier to edit text
 " Edit my Vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
