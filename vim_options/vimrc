@@ -102,7 +102,8 @@ nnoremap <leader><c-u> viwU<esc>
 inoremap <leader><c-d> <esc>ddi
 " Making it easier to make it easier to edit text
 " Edit my Vimrc
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>evv :vsplit $MYVIMRC<cr>
+:nnoremap <leader>evh :split $MYVIMRC<cr>
 " Source my Vimrc
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 " Surrond the current word in quotes
