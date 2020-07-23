@@ -8,3 +8,9 @@
 	editor = vim
 [meld]
 	tool = meld
+[alias]
+  delbrs = fetch origin --prune
+  newbr = !git pull && git checkout -b $1 && git push --set-upstream origin $1 &&:
+  changes = diff @{u}
+[pull]
+	rebase = false
