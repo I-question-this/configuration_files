@@ -94,7 +94,8 @@ set clipboard=unnamed
 " End Variable Settings
 
 " Non-Leader Key Mappings
-
+" Right-handed escape from insert mode
+inoremap jk <esc>
 " End Non-Leader Key Mappings
 
 " Leader Key Mappings
