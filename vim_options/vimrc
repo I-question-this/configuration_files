@@ -86,31 +86,35 @@ set clipboard=unnamed
 
 " End Variable Settings
 
+" Non-Leader Key Mappings
+
+" End Non-Leader Key Mappings
+
 " Leader Key Mappings
 let mapleader = ","
 " Restore normal mapping
-:nnoremap <leader>, ,
+nnoremap <leader>, ,
 " File Finding
 noremap <leader>; :Files<CR>
 " Line Movements
 nnoremap <leader>- ddp
 nnoremap <leader>_ ddkkp
-" Uppercase a word in different modes
-inoremap <leader><c-u> <esc>viwUi
-nnoremap <leader><c-u> viwU<esc>
+" Toggle case a word in different modes
+inoremap <leader><c-u> <esc>viw~i
+nnoremap <leader><c-u> viw~<esc>
 " Line deletion
 inoremap <leader><c-d> <esc>ddi
 " Making it easier to make it easier to edit text
 " Edit my Vimrc
-:nnoremap <leader>evv :vsplit $MYVIMRC<cr>
-:nnoremap <leader>evh :split $MYVIMRC<cr>
+nnoremap <leader>evv :vsplit $MYVIMRC<cr>
+nnoremap <leader>evh :split $MYVIMRC<cr>
 " Source my Vimrc
-:nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 " Surrond the current word in quotes
-:nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
-":vnoremap <leader>' `<<esc>a'<esc>`>i'<esc>
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+vnoremap <leader>' `<<esc>a'<esc>`>i'<esc>
 " Surrond the current word in double quotes
-:nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 " End Leader Key Mappings
 
 " Local Leader Key Mappings
