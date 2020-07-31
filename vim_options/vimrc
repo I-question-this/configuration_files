@@ -39,6 +39,7 @@ Plugin 'lervag/vimtex'
 " Multiple Cursors
 Plugin 'terryma/vim-multiple-cursors'
 " Utilities
+Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-eunuch'
 " Syntax Highlighting
 Plugin 's3rvac/vim-syntax-retdecdsm'
@@ -47,6 +48,12 @@ Plugin 's3rvac/vim-syntax-retdecdsm'
 call vundle#end() " required
 filetype plugin indent on " required
 " End Vundle
+
+" Status Line Settings
+set laststatus=2
+let g:lightline = {
+  \ 'colorscheme': 'default',
+  \ }
 
 " Variable Settings
 " Colors
