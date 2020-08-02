@@ -6,12 +6,14 @@ __author__="Tyler Westland"
 import argparse
 import os
 
-def parse_arguments(args=None):
+
+def parse_arguments(args=None) -> None:
     """Returns the parsed arguments.
 
-    Arguments:
+    Parameters
+    ----------
     args: List of strings to be parsed by argparse.
-        None results in argparse using the values passed into
+        The default None results in argparse using the values passed into
         sys.args.
     """
     parser = argparse.ArgumentParser(
@@ -26,13 +28,25 @@ def parse_arguments(args=None):
     return args
 
 
-def main(input_file, quiet=False, output_file="output"):
+def main(input_file, quiet=False, output_file="output") -> int:
     """Main function.
 
-    Arguments:
-    input_file: Path the input file.
-    output_file: Path to the output file.
-    quiet: Rather non-errors should be printed.
+    Parameters
+    ----------
+    input_file: str:
+        Path the input file.
+    output_file: str
+        Path to the output file. Default is 'output'
+    quiet: bool
+        Rather non-errors should be printed. Default is False
+    Returns
+    -------
+    int
+        The exit code.
+    Raises
+    ------
+    FileNotFoundError
+        Means that the input file was not found.
     """
     # Error check if the file even exists
     if not os.path.isfile(input_file):
