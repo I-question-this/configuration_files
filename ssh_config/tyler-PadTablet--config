@@ -13,6 +13,14 @@ host biggamer
   # Folding@Home
   LocalForward 7396 localhost:7396
   User tyler
+  Hostname apartment.home
+
+host biggamer-at-home
+  ForwardAgent yes
+  IdentityFile ~/.ssh/dexter-biggamer
+  # Folding@Home
+  LocalForward 7396 localhost:7396
+  User tyler
   Hostname biggamer.apartment.home
 
 host retropie
