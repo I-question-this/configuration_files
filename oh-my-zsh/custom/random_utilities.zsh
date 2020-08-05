@@ -5,6 +5,7 @@ alias folder_size="du -hcs"
 alias istheinternetonfire="dig +short -t txt istheinternetonfire.com"
 alias recursive_touch="find . -exec touch {} \;"
 alias simpleHTTPServer="python2 -m SimpleHTTPServer"
+alias graphics_card="lspci -k | grep -A 2 -E '(VGA|3D)'"
 
 # nohup -- Make it quiet.
 # disown -- Make it not die with when the terminal is closed.
