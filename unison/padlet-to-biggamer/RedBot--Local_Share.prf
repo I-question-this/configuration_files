@@ -1,0 +1,5 @@
+# Unison preferences
+label = Redbot--Local_Share: Padlet <-> biggamer
+root = /home/tyler/.local/share/Red-DiscordBot
+root = ssh://tyler@biggamer.apartment.home//home/tyler/.local/share/Red-DiscordBot
+sshargs = -C -i ~/.ssh/dexter-biggamer
