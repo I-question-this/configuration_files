@@ -1,12 +1,2 @@
-e file.analyze=1      ; perform basic code analysis
-e file.id=1           ; identify files when opened
-e file.flag=1         ; automatically add bookmarks (flags) to syms, strings, etc.
-e io.cache=true       ; 
-e io.cache.write=true ;
-e src.color=1         ; enable color screen
-
-;; Macros
-; phrack.org/issues/66/14.html#article
-(cipher from to key, s $0, b $1-$0,woa $2, wox $2,)
-(inject hookaddr file addr, wa call $2 @ $0, wf $1 @ $2,)
-
+e io.cache=true        
+e io.cache.write=true
