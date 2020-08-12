@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ln radare2rc $HOME/.radare2rc
+ln -sf $(realpath radare2rc) $HOME/.radare2rc
