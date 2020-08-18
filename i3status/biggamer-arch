@@ -13,6 +13,7 @@ general {
 
 order += "volume master"
 order += "ethernet _first_"
+order += "path_exists NORDVPN"
 order += "disk /"
 order += "disk /home"
 order += "load"
@@ -31,6 +32,11 @@ ethernet _first_ {
   format_up = "E: %ip (%speed)"
   format_down = "E: down"
 }
+
+path_exists NORDVPN {
+  path = "/proc/sys/net/ipv4/conf/nordlynx"
+}
+
 
 disk "/" {
   format = "💽-/: %used/%total"
