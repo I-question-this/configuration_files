@@ -1,5 +1,8 @@
 # Unison preferences
 label = Games: Padlet <-> biggamer
+ignore = BelowPath SteamLibrary--Linux
 root = /home/tyler/Games
 root = ssh://tyler@biggamer.apartment.home//home/tyler/Games
-sshargs = -C
+sshargs = -C -i ~/.ssh/dexter-biggamer
+
+ignore = Name {,.}*{.acf}
