@@ -11,8 +11,15 @@ function is_r2_running() {
 
 if ! is_r2_running
 then
-  WALLPAPERS=$HOME/Pictures/Wallpapers
-  wal --vte -qi $WALLPAPERS
+  if [ "$#" -eq 0 ]; then
+    WALLPAPERS=$HOME/Pictures/Wallpapers
+    wal --vte -qi $WALLPAPERS
+  elif [ "$#" -eq 1 ]; then
+    wal --vte -qi $1
+  else
+    echo "$0: `basename $0` <?wallpaper_path>"
+    exit 0
+  fi
 else
   echo -n "pywal breaks radare2, please close it gracefully so pywal doesn't "
   echo "kill it."
