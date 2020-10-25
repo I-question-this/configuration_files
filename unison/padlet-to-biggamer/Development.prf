@@ -1,5 +1,6 @@
 # Unison preferences
 label = Development: Padlet <-> biggamer
+ignore = Name __pycache__
 follow = Path Development/DiscordPlays
 follow = Path Development/DiscordPlays--Development
 root = /home/tyler/Development
