@@ -10,3 +10,4 @@ alias graphics_card="lspci -k | grep -A 2 -E '(VGA|3D)'"
 # nohup -- Make it quiet.
 # disown -- Make it not die with when the terminal is closed.
 function independent_child () { nohup $@ &> /dev/null & disown }
+function pkill--discord () { pkill -f /opt/discord/Discord; pkill -f /opt/discord/Discord}
