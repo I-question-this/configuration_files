@@ -14,3 +14,5 @@
   changes = diff @{u}
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
