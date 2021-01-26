@@ -12,6 +12,7 @@ general {
 }
 
 order += "volume master"
+order += "read_file NOTIFICATIONS"
 order += "ethernet _first_"
 order += "path_exists NORDVPN"
 order += "path_exists UC-VPN"
@@ -27,6 +28,12 @@ volume master {
   device = "default"
   mixer = "Master"
   mixer_idx = 0
+}
+
+read_file NOTIFICATIONS {
+  format = "%title: on"
+  format_bad = "%title: off"
+  path = "/home/tyler/.config/dunst/is_unpaused"
 }
 
 ethernet _first_ {
