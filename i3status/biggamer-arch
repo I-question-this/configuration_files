@@ -18,9 +18,11 @@ order += "path_exists NORDVPN"
 order += "path_exists UC-VPN"
 order += "disk /"
 order += "disk /home"
+order += "disk /extra"
 order += "load"
 order += "memory"
 order += "tztime local"
+order += "tztime UTC"
 
 volume master {
   format = "♪: %volume"
@@ -58,6 +60,10 @@ disk "/home" {
   format = "💽-/home: %used/%total"
 }
 
+disk "/extra" {
+  format = "💽-extra: %used/%total"
+}
+
 load {
   format = "💭: %1min"
 }
@@ -70,4 +76,9 @@ memory {
 
 tztime local {
   format = "%Y-%m-%d %H:%M:%S"
+}
+
+tztime UTC {
+  timezone = "UTC"
+  format = "UTC:%H:%M:%S"
 }
