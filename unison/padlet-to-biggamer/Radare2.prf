@@ -1,5 +1,5 @@
 # Unison preferences
 label = Radare2: Padlet <-> biggamer
 root = /home/tyler/.local/share/radare2/
-root = ssh://tyler@biggamer.apartment.home//home/tyler/.local/share/radare2/
-sshargs = -C -i ~/.ssh/dexter-biggamer
+root = ssh://tyler@apartment.home//home/tyler/.local/share/radare2/
+sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537

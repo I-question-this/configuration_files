@@ -1,5 +1,5 @@
 # Unison preferences
 label = Templates: Padlet <-> biggamer
 root = /home/tyler/Templates
-root = ssh://tyler@biggamer.apartment.home//home/tyler/Templates
-sshargs = -C -i ~/.ssh/dexter-biggamer
+root = ssh://tyler@apartment.home//home/tyler/Templates
+sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537

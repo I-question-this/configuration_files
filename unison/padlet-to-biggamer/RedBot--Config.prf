@@ -1,5 +1,5 @@
 # Unison preferences
 label = Redbot--Config: Padlet <-> biggamer
 root = /home/tyler/.config/Red-DiscordBot
-root = ssh://tyler@biggamer.apartment.home//home/tyler/.config/Red-DiscordBot
-sshargs = -C -i ~/.ssh/dexter-biggamer
+root = ssh://tyler@apartment.home//home/tyler/.config/Red-DiscordBot
+sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537
