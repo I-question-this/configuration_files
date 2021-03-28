@@ -44,7 +44,9 @@ ethernet _first_ {
 }
 
 path_exists NORDVPN {
-  path = "/proc/sys/net/ipv4/conf/nordlynx"
+  # Might not be NORDVPN specific, but this is what nordvpn
+  # makes now.
+  path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
 path_exists UC-VPN {
