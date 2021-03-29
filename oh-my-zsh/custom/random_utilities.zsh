@@ -11,3 +11,5 @@ alias graphics_card="lspci -k | grep -A 2 -E '(VGA|3D)'"
 # disown -- Make it not die with when the terminal is closed.
 function independent_child () { nohup $@ &> /dev/null & disown }
 function pkill--discord () { pkill -f /opt/discord/Discord; pkill -f /opt/discord/Discord}
+
+function independent_zathura () { independent_child zathura $@ }
