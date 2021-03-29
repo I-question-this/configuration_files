@@ -1,6 +1,8 @@
 [user]
 	email = tylerofthewest@gmail.com
-	name = Tyler Westland
+  name = Tyler Westland
+[credential "https://github.com"]
+  username = I-question-this
 [push]
 	default = simple
 [core]
