@@ -13,7 +13,7 @@ if ! is_r2_running
 then
   if [ "$#" -eq 0 ]; then
     WALLPAPERS=$HOME/Pictures/Wallpapers
-    wal --vte -qi $WALLPAPERS
+    wal --vte -qi $WALLPAPERS --iterative
   elif [ "$#" -eq 1 ]; then
     wal --vte -qi $1
   else
