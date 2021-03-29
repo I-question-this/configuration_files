@@ -2,26 +2,26 @@
 AddKeysToAgent yes
 
 host github
-  IdentityFile ~/.ssh/github
   User git
   Hostname github.com
 
 # Host specific
 host biggamer
   ForwardAgent yes
-  IdentityFile ~/.ssh/dexter-biggamer
   # Folding@Home
   LocalForward 7396 localhost:7396
   User tyler
   Hostname apartment.home
+  Port 4537
+  IdentityFile ~/.ssh/padlet_to_biggamer_ed25519
 
 host biggamer-at-home
   ForwardAgent yes
-  IdentityFile ~/.ssh/dexter-biggamer
   # Folding@Home
   LocalForward 7396 localhost:7396
   User tyler
   Hostname biggamer.apartment.home
+  IdentityFile ~/.ssh/padlet_to_biggamer_ed25519
 
 host retropie
   User pi
@@ -29,13 +29,13 @@ host retropie
 
 host dracarys
   ForwardAgent yes
-  IdentityFile ~/.ssh/dracarys
   # phpMyAdmin
   LocalForward 8989 localhost:80
   # Folding@Home
   LocalForward 7396 localhost:7397
   User tylerwestland
   Hostname dracarys.mindlab.uc.edu
+  IdentityFile ~/.ssh/to_dracarys
 
 host metasploitable
   User msfadmin
