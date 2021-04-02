@@ -15,3 +15,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export CONDA_AUTO_ACTIVATE_BASE=false
+conda deactivate
