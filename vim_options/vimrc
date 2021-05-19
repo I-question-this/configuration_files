@@ -123,6 +123,9 @@ nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>' `<<esc>a'<esc>`>i'<esc>
 " Surrond the current word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+" Use the  hacky clipboard
+nnoremap <leader>p :read /tmp/clipboard-hack
+nnoremap <leader>pe :split /tmp/clipboard-hack
 " End Leader Key Mappings
 
 " Local Leader Key Mappings
@@ -145,5 +148,6 @@ let maplocalleader = "\\"
 :iabbrev bitzm \begin{itemize}
 :iabbrev benmr \begin{enumerate}
 :iabbrev insfig \begin{figure}[H]\center\includegraphics[width=0.5\textwidth,keepaspectratio]{}\end{figure}
+:iabbrev rarrow \(\rightarrow\)
 " End Abbreviations
 
