@@ -1,0 +1,131 @@
+################################################################################
+# GENERAL_KEYBINDS
+################################################################################
+#
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus  move scratchpad
+# Show the first scratchpad window
+bindsym $mod+minus        scratchpad show
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# Making floating window show on every workspace
+bindsym $mod+Ctrl+minus sticky toggle
+# change focus between tiling / floating windows
+bindsym $mod+space        focus mode_toggle
+# Start a terminal
+bindsym $mod+Return       exec i3-sensible-terminal
+# Kill focused window
+bindsym $mod+Shift+q      kill
+# Change focused window
+bindsym $mod+$left        focus left
+bindsym $mod+$down        focus down
+bindsym $mod+$up          focus up
+bindsym $mod+$right       focus right
+# Move focused window
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
+bindsym $mod+Shift+$right move right
+# Split in vertical/horizontal orientation
+bindsym $mod+v            split v
+bindsym $mod+Shift+v      split h
+# Enter fullscreen mode for the focused container
+bindsym $mod+f            fullscreen toggle
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s            layout stacking
+bindsym $mod+w            layout tabbed
+bindsym $mod+e            layout toggle split
+# Focus parent/child container
+bindsym $mod+a            focus parent
+bindsym $mod+Shift+a      focus child
+# Resize window
+bindsym $mod+r            mode "resize"
+# Switch to workspace
+bindsym $mod+1            workspace $ws1
+bindsym $mod+2            workspace $ws2
+bindsym $mod+3            workspace $ws3
+bindsym $mod+4            workspace $ws4
+bindsym $mod+5            workspace $ws5
+bindsym $mod+6            workspace $ws6
+bindsym $mod+7            workspace $ws7
+bindsym $mod+8            workspace $ws8
+bindsym $mod+9            workspace $ws9
+bindsym $mod+0            workspace $ws10
+bindsym $mod+Ctrl+1       workspace $ws11
+bindsym $mod+Ctrl+2       workspace $ws12
+bindsym $mod+Ctrl+3       workspace $ws13
+bindsym $mod+Ctrl+4       workspace $ws14
+bindsym $mod+Ctrl+5       workspace $ws15
+bindsym $mod+Ctrl+6       workspace $ws16
+bindsym $mod+Ctrl+7       workspace $ws17
+bindsym $mod+Ctrl+8       workspace $ws18
+bindsym $mod+Ctrl+9       workspace $ws19
+bindsym $mod+Ctrl+0       workspace $ws20
+# Move focused container to workspace
+bindsym $mod+Shift+1      move container to workspace $ws1
+bindsym $mod+Shift+2      move container to workspace $ws2
+bindsym $mod+Shift+3      move container to workspace $ws3
+bindsym $mod+Shift+4      move container to workspace $ws4
+bindsym $mod+Shift+5      move container to workspace $ws5
+bindsym $mod+Shift+6      move container to workspace $ws6
+bindsym $mod+Shift+7      move container to workspace $ws7
+bindsym $mod+Shift+8      move container to workspace $ws8
+bindsym $mod+Shift+9      move container to workspace $ws9
+bindsym $mod+Shift+0      move container to workspace $ws10
+bindsym $mod+Shift+Ctrl+1 move container to workspace $ws11
+bindsym $mod+Shift+Ctrl+2 move container to workspace $ws12
+bindsym $mod+Shift+Ctrl+3 move container to workspace $ws13
+bindsym $mod+Shift+Ctrl+4 move container to workspace $ws14
+bindsym $mod+Shift+Ctrl+5 move container to workspace $ws15
+bindsym $mod+Shift+Ctrl+6 move container to workspace $ws16
+bindsym $mod+Shift+Ctrl+7 move container to workspace $ws17
+bindsym $mod+Shift+Ctrl+8 move container to workspace $ws18
+bindsym $mod+Shift+Ctrl+9 move container to workspace $ws19
+bindsym $mod+Shift+Ctrl+0 move container to workspace $ws20
+# reload the configuration file
+bindsym $mod+Shift+c      reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r      restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e      exec "i3-nagbar -t warning -m 'You pressed the exit \
+  shortcut. Do you really want to exit i3? This will end your X session.' -b \
+  'Yes, exit i3' 'i3-msg exit'"
+# Shutdown, Reboot, & Lock Screen
+bindsym $mod+Shift+s mode "$mode_system"
+bindcode 160 exec --no-startup-id $Locker
+# start dmenu (a program launcher)
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"'
+
+# Manual managment of external displays
+bindsym $mod+shift+x mode "$mode_mon_sec"
+
+# Move workspace to different display
+bindsym $mod+m mode "$mode_move_workspace"
+
+# Window transparency
+bindsym $mod+t exec transparency.sh
+# Change wallpaper
+bindsym $mod+shift+t exec change_background.sh
+
+# Volume control
+bindcode 121 exec --no-startup-id pulsemixer --toggle-mute
+bindcode 122 exec --no-startup-id pulsemixer --change-volume -2
+bindcode 123 exec --no-startup-id pulsemixer --change-volume +2
+
+# Print screen
+bindsym Print exec --no-startup-id scrot -se 'mv $f ~/Downloads'
+
+# Set primary clipboard to contents of clipboard
+bindsym $mod+c exec --no-startup-id xclip -o -sel clipboard | xclip -i -sel primary && xclip -o -sel clipboard > /tmp/clipboard-hack
+
+# Rawdog
+bindsym $mod+y exec --no-startup-id notify-send "rawdog" "$(rawdog -uw)" -i ~/.rawdog/imgs/icons/favicon.svg
+
+# Toggle notifications from dunst
+bindsym $mod+n exec --no-startup-id notify-send "DUNST_COMMAND_TOGGLE" && ~/.bin/dunst_status.sh
+
+# Unmute Spotify
+bindsym $mod+u exec --no-startup-id "unmute_spotify.py"
+

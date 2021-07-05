@@ -1,0 +1,44 @@
+###############################################################################
+# ASSIGNS
+###############################################################################
+
+# Workspace assignments
+# Workspace 1: Messaging and Conferencing
+assign [class="discord"] → $ws1
+assign [class="(?i)^microsoft teams - preview$"] $ws1
+assign [class="(?i)slack"] → $ws1
+assign [class="(?i)^signal"] → $ws1
+assign [class="(?i)^thunderbird$"] $ws14
+assign [class="(?i)^zoom$"] $ws1
+# Workspace 2: Security
+assign [class="(?i)kee(?i)pass(?i)x(?i)c"] → $ws2
+assign [class="(?i)^Yubico Authenticator$"] $ws2
+# Workspace 3: Reserach
+assign [class="Mendeley Desktop"] → $ws3
+assign [class="(?i)Zotero"] → $ws3
+# Workspace 4: Web browsing
+assign [class="(?i)^chromium-browser$"] $ws4
+assign [class="(?i)^firefox$"] $ws4
+
+# Workspace default screens
+workspace $ws1 output $mon_sec
+workspace $ws2 output $mon_sec
+workspace $ws3 output $mon_sec
+workspace $ws4 output $mon_sec
+workspace $ws5 output $mon_prim
+workspace $ws6 output $mon_sec
+workspace $ws7 output $mon_sec
+workspace $ws8 output $mon_sec
+workspace $ws9 output $mon_sec
+workspace $ws10 output $mon_sec
+workspace $ws11 output $mon_sec
+workspace $ws12 output $mon_sec
+workspace $ws13 output $mon_sec
+workspace $ws14 output $mon_sec
+workspace $ws15 output $mon_sec
+workspace $ws16 output $mon_sec
+workspace $ws17 output $mon_sec
+workspace $ws18 output $mon_sec
+workspace $ws19 output $mon_sec
+workspace $ws20 output $mon_sec
+

@@ -1,0 +1,12 @@
+################################################################################
+# BAR
+################################################################################
+#
+# Start i3bar to display a workspace/status bar
+bar {
+  font pango:Terminus, FontAwesome, NerdFont 6
+  status_command          i3status
+  strip_workspace_numbers no
+  tray_output             primary
+}
+
