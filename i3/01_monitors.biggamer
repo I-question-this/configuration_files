@@ -4,5 +4,5 @@
 #
 # Assign values for primary and secondary monitors
 set $mon_prim DVI-D-0
-set $mon_sec  HDMI-0
+set $mon_sec  DVI-D-1
 
