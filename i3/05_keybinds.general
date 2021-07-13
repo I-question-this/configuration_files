@@ -115,7 +115,7 @@ bindcode 122 exec --no-startup-id pulsemixer --change-volume -2
 bindcode 123 exec --no-startup-id pulsemixer --change-volume +2
 
 # Print screen
-bindsym Print exec --no-startup-id scrot -se 'mv $f ~/Downloads'
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Downloads'
 
 # Set primary clipboard to contents of clipboard
 bindsym $mod+c exec --no-startup-id xclip -o -sel clipboard | xclip -i -sel primary && xclip -o -sel clipboard > /tmp/clipboard-hack
