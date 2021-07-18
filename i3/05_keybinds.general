@@ -111,8 +111,8 @@ bindsym $mod+shift+t exec change_background.sh
 
 # Volume control
 bindcode 121 exec --no-startup-id pulsemixer --toggle-mute
-bindcode 122 exec --no-startup-id pulsemixer --change-volume -2
-bindcode 123 exec --no-startup-id pulsemixer --change-volume +2
+bindcode 122 exec --no-startup-id pulsemixer --change-volume -1
+bindcode 123 exec --no-startup-id pulsemixer --change-volume +1
 
 # Print screen
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Downloads'
