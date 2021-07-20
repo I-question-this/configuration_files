@@ -125,3 +125,13 @@ mode "$mode_brightness" {
     bindsym Escape mode "default"
 }
 
+# Pomodero timer
+set $mode_pomodero Pomodero Timer: w:work, s:short break, l:long break
+mode "$mode_pomodero" {
+  bindsym w exec --no-startup-id pomodero.sh work &, mode "default"
+  bindsym s exec --no-startup-id pomodero.sh short-break &, mode "default"
+  bindsym l exec --no-startup-id pomodero.sh long-break &, mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return  mode "default"
+  bindsym Escape  mode "default"
+}

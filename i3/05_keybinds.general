@@ -126,6 +126,9 @@ bindsym $mod+y exec --no-startup-id notify-send "rawdog" "$(rawdog -uw)" -i ~/.r
 # Toggle notifications from dunst
 bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle && dunst_status.sh
 
+# Pomodero control
+bindsym $mod+p mode "$mode_pomodero"
+
 # Unmute Spotify
 bindsym $mod+u exec --no-startup-id "unmute_spotify.py"
 
