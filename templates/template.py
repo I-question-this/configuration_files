@@ -5,6 +5,7 @@ __author__="Tyler Westland"
 
 import argparse
 import os
+import sys
 
 
 def parse_arguments(args=None) -> None:
@@ -58,11 +59,24 @@ def main(input_file, quiet=False, output_file="output") -> int:
 
 # Execute only if this file is being run as the entry file.
 if __name__ == "__main__":
-    import sys
     args = parse_arguments()
     try:
-        exit(main(**vars(args)))
+        sys.exit(main(**vars(args)))
     except FileNotFoundError as exp:
         print(exp, file=sys.stderr)
-        exit(-1)
+        sys.exit(-1)
 
+
+def cli_interface() -> None:
+    """Get program arguments from command line and run main"""
+    args = parse_arguments()
+    try:
+        sys.exit(main(**vars(args)))
+    except FileNotFoundError as exp:
+        print(exp, file=sys.stderr)
+        sys.exit(-1)
+
+
+# Execute only if this file is being run as the entry file.
+if __name__ == "__main__":
+    cli_interface()
