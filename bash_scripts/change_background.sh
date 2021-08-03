@@ -9,16 +9,24 @@ function is_r2_running() {
   fi
 }
 
-if ! is_r2_running
-then
-  if [ "$#" -eq 0 ]; then
-    WALLPAPERS=$HOME/Pictures/Wallpapers
-    wal --vte -qi $WALLPAPERS --iterative
-  elif [ "$#" -eq 1 ]; then
-    wal --vte -qi $1
-  else
+function random_file() {
+  find $1 -type f | sort -R | tail -n 1
+}
+
+if ! is_r2_running; then
+  if [ "$#" -gt 1 ]; then
     echo "$0: `basename $0` <?wallpaper_path>"
+    echo "wallpaper_path can be a file or a directory"
     exit 0
+  else
+    # Fall back on wallpaper folder to pick a random photo
+    if [ "$#" -eq 0 ]; then
+      wallpaper=$(random_file $HOME/Pictures/Wallpapers)
+    # Else pick randomly from the input
+    else
+      wallpaper=$(random_file $1)
+    fi
+    wal --vte -qi $wallpaper
   fi
 else
   echo -n "pywal breaks radare2, please close it gracefully so pywal doesn't "
