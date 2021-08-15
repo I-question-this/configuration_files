@@ -9,3 +9,6 @@ docs/doxygen/latex
 *.tmp
 # Swap Files
 .*.swp
+
+# Tags files
+tags
