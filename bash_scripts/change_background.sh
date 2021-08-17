@@ -26,7 +26,17 @@ if ! is_r2_running; then
     else
       wallpaper=$(random_file $1)
     fi
-    wal --vte -qi $wallpaper
+
+    # Determine size of the wallpaper image
+    # Note used now, but maybe in the future
+    width=$(identify -format "%w" "$wallpaper")> /dev/null
+    height=$(identify -format "%h" "$wallpaper")> /dev/null
+
+    # Set wallpaper with feh to get the full size of the image
+    feh --bg-max $wallpaper
+
+    # Change the colors, but skip setting the wallpaper
+    wal --vte -nqi $wallpaper
   fi
 else
   echo -n "pywal breaks radare2, please close it gracefully so pywal doesn't "
