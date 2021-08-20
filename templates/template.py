@@ -57,16 +57,6 @@ def main(input_file, quiet=False, output_file="output") -> int:
     return 0
 
 
-# Execute only if this file is being run as the entry file.
-if __name__ == "__main__":
-    args = parse_arguments()
-    try:
-        sys.exit(main(**vars(args)))
-    except FileNotFoundError as exp:
-        print(exp, file=sys.stderr)
-        sys.exit(-1)
-
-
 def cli_interface() -> None:
     """Get program arguments from command line and run main"""
     args = parse_arguments()
