@@ -20,8 +20,6 @@ Plugin 'w0rp/ale'
 Plugin 'tjdevries/overlength.vim'
 " Code Commenting Out
 Plugin 'scrooloose/nerdcommenter'
-" Code Completion
-Plugin 'ycm-core/YouCompleteMe'
 " Colors
 Plugin 'dylanaraps/wal.vim'
 " Editor Configurations
@@ -34,6 +32,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'fidian/hexmode'
 " Git Additions
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 " LaTeX
 Plugin 'lervag/vimtex'
 " Multiple Cursors
