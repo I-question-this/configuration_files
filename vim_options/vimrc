@@ -1,7 +1,21 @@
 set encoding=utf-8
 " Vundle
-set nocompatible " required for Vundle
+set nocompatible " required for Vundle, also I've never have or will use Vi
 filetype off " required for Vundle
+
+" Enable syntax highlighting
+syntax enable
+
+" File Finding
+" Man help page: path
+" Allows :find/sfind to tab complete partial and * fuzzy matches
+" Also lets you autocomplete any open buffer with :buffer/sbuffer
+" Search down into subfolders
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -26,8 +40,6 @@ Plugin 'dylanaraps/wal.vim'
 Plugin 'editorconfig/editorconfig-vim'
 " File Tree View
 Plugin 'scrooloose/nerdtree'
-" File Finding
-Plugin 'junegunn/fzf.vim'
 " Hex Editing
 Plugin 'fidian/hexmode'
 " Git Additions
