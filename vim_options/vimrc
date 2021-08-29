@@ -21,6 +21,14 @@ set wildmenu
 " Use ^t to jump back up the tag stack
 command! MakeTags !ctags -R .
 
+" File Browsing
+"let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browser_split=4 " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -42,8 +50,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'dylanaraps/wal.vim'
 " Editor Configurations
 Plugin 'editorconfig/editorconfig-vim'
-" File Tree View
-Plugin 'scrooloose/nerdtree'
 " Hex Editing
 Plugin 'fidian/hexmode'
 " Git Additions
