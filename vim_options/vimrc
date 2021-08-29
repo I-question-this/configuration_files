@@ -124,7 +124,7 @@ let mapleader = ","
 " Restore normal mapping
 nnoremap <leader>, ,
 " File Finding
-noremap <leader>; :Files<CR>
+noremap <leader>; :Files<cr>
 " Line Movements
 nnoremap <leader>- ddp
 nnoremap <leader>_ ddkkp
@@ -144,9 +144,18 @@ nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>' `<<esc>a'<esc>`>i'<esc>
 " Surrond the current word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-" Use the  hacky clipboard
-nnoremap <leader>p :read /tmp/clipboard-hack
-nnoremap <leader>pe :split /tmp/clipboard-hack
+" SNIPPETS
+" Use the hacky clipboard
+nnoremap <leader>clip :-1read /tmp/clipboard-hack<cr>$a
+nnoremap <leader>codeinp :-1read $HOME/.vim/snippets/skeleton_lstinputlisting.tex<cr>$ha
+nnoremap <leader>codelist :-1read $HOME/.vim/snippets/skeleton_lstlisting.tex<cr>$a
+nnoremap <leader>enum :-1read $HOME/.vim/snippets/skeleton_enumerate.tex<cr>1j$a
+nnoremap <leader>fig :-1read $HOME/.vim/snippets/skeleton_figure.tex<cr>3j$ha
+nnoremap <leader>frame :-1read $HOME/.vim/snippets/skeleton_frame.tex<cr>$ha
+nnoremap <leader>html :-1read $HOME/.vim/snippets/skeleton.html<cr>3jwf>a
+nnoremap <leader>list :-1read $HOME/.vim/snippets/skeleton_list.tex<cr>1j$a
+nnoremap <leader>mini :-1read $HOME/.vim/snippets/skeleton_minipage.tex<cr>$a
+nnoremap <leader>tab :-1read $HOME/.vim/snippets/skeleton_table.tex<cr>4j$4b
 " End Leader Key Mappings
 
 " Local Leader Key Mappings
@@ -166,9 +175,6 @@ let maplocalleader = "\\"
 :iabbrev ccopy Copyright 2020 Tyler Westland, all rights reserved.
 
 " LaTeX
-:iabbrev bitzm \begin{itemize}
-:iabbrev benmr \begin{enumerate}
-:iabbrev insfig \begin{figure}[H]\center\includegraphics[width=0.5\textwidth,keepaspectratio]{}\end{figure}
 :iabbrev rarrow \(\rightarrow\)
 " End Abbreviations
 
