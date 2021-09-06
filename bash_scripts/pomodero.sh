@@ -13,6 +13,8 @@ SCRIPT=$( basename "$0" )
 # Current version
 VERSION="1.0.0"
 
+STATUS_FILE="$HOME/.config/i3status/pomodero"
+
 #
 # Message to display for usage and help.
 #
@@ -64,10 +66,14 @@ function version {
 }
 
 function app-work {
+  work_until=$(date -d "+$WORK minutes" "+%R")
+  # Set i3 status file
+  echo "Work until $work_until" > $STATUS_FILE
   # Ensure notifications are on
   dunstctl set-paused false && dunst_status.sh
   # Notify beginning of work session
-  notify-send "Pomodero: WORK START" "Work for $WORK minutes."
+  notify-send "Pomodero: WORK START"\
+    "Work for $WORK minutes. Ends at $work_until"
   # Wait 10 seconds before turning off notifications
   sleep 10s
   # Turn off notifications
@@ -78,21 +84,29 @@ function app-work {
   dunstctl set-paused false && dunst_status.sh
   # Notify end of work session
   notify-send "Pomodero: WORK END" "Work is done, good job."
+  # Set i3 status file
+  echo "N/A" > $STATUS_FILE
 }
 
 function break-command {
   local break_type="$1"
   local break_length="$2"
 
+  break_until=$(date -d "+$break_length minutes" "+%R")
+  # Set i3 status file
+  echo "$1 break until $break_until" > $STATUS_FILE
   # Ensure notifications are on
   dunstctl set-paused false && dunst_status.sh
   # Notify beginning of break session
   notify-send "Pomodero: $break_type BREAK START"\
-    "Break for $break_length minutes."
+    "Break for $break_length minutes. Ends at $break_until"
+  # Sleep for break_length minutes
   sleep ${break_length}m
   # Notify end of break session
   notify-send "Pomodero: $break_type BREAK END"\
     "End of break."
+  # Set i3 status file
+  echo "N/A" > $STATUS_FILE
 }
 
 function app-short-break {

@@ -11,6 +11,7 @@ general {
   interval = 5
 }
 
+order += "read_file POMODERO"
 order += "volume master"
 order += "read_file NOTIFICATIONS"
 order += "ethernet _first_"
@@ -23,6 +24,12 @@ order += "load"
 order += "memory"
 order += "tztime local"
 order += "tztime UTC"
+
+read_file POMODERO {
+  format = "%content"
+  format_bad = "%title: UNKNOWN"
+  path = "/home/tyler/.config/i3status/pomodero"
+}
 
 volume master {
   format = "♪: %volume"
