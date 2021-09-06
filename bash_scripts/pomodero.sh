@@ -84,8 +84,8 @@ function app-work {
   dunstctl set-paused false && dunst_status.sh
   # Notify end of work session
   notify-send "Pomodero: WORK END" "Work is done, good job."
-  # Set i3 status file
-  echo "N/A" > $STATUS_FILE
+  # Reset i3 status file
+  rm $STATUS_FILE
 }
 
 function break-command {
@@ -105,8 +105,8 @@ function break-command {
   # Notify end of break session
   notify-send "Pomodero: $break_type BREAK END"\
     "End of break."
-  # Set i3 status file
-  echo "N/A" > $STATUS_FILE
+  # Reset i3 status file
+  rm $STATUS_FILE
 }
 
 function app-short-break {
