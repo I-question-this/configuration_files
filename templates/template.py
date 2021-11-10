@@ -8,9 +8,8 @@ import os
 import sys
 
 
-def parse_arguments(args=None) -> None:
+def parse_arguments(args=None) -> argparse.Namespace:
     """Returns the parsed arguments.
-
     Parameters
     ----------
     args: List of strings to be parsed by argparse.
@@ -29,12 +28,12 @@ def parse_arguments(args=None) -> None:
     return args
 
 
-def main(input_file, quiet=False, output_file="output") -> int:
+def main(input_file:str, quiet:bool=False, output_file:str="output") -> None:
     """Main function.
 
     Parameters
     ----------
-    input_file: str:
+    input_file: str
         Path the input file.
     output_file: str
         Path to the output file. Default is 'output'
@@ -42,8 +41,8 @@ def main(input_file, quiet=False, output_file="output") -> int:
         Rather non-errors should be printed. Default is False
     Returns
     -------
-    int
-        The exit code.
+    ???
+        Something useful.
     Raises
     ------
     FileNotFoundError
@@ -53,18 +52,18 @@ def main(input_file, quiet=False, output_file="output") -> int:
     if not os.path.isfile(input_file):
         raise FileNotFoundError("File not found: {}".format(input_file))
 
-    # Return success code
-    return 0
+    return None
 
 
 def cli_interface() -> None:
     """Get program arguments from command line and run main"""
     args = parse_arguments()
     try:
-        sys.exit(main(**vars(args)))
+        main(**vars(args))
+        sys.exit(0)
     except FileNotFoundError as exp:
         print(exp, file=sys.stderr)
-        sys.exit(-1)
+        sys.exit(1)
 
 
 # Execute only if this file is being run as the entry file.
