@@ -149,6 +149,7 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>clip :-1read /tmp/clipboard-hack<cr>$a
 nnoremap <leader>codeinp :-1read $HOME/.vim/snippets/skeleton_lstinputlisting.tex<cr>$ha
 nnoremap <leader>codelist :-1read $HOME/.vim/snippets/skeleton_lstlisting.tex<cr>$a
+nnoremap <leader>codefig :-1read $HOME/.vim/snippets/skeleton_lstinputlisting_figure.tex<cr>$a
 nnoremap <leader>enum :-1read $HOME/.vim/snippets/skeleton_enumerate.tex<cr>1j$a
 nnoremap <leader>fig :-1read $HOME/.vim/snippets/skeleton_figure.tex<cr>3j$ha
 nnoremap <leader>frame :-1read $HOME/.vim/snippets/skeleton_frame.tex<cr>$ha
