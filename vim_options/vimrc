@@ -157,6 +157,7 @@ nnoremap <leader>html :-1read $HOME/.vim/snippets/skeleton.html<cr>3jwf>a
 nnoremap <leader>list :-1read $HOME/.vim/snippets/skeleton_list.tex<cr>1j$a
 nnoremap <leader>mini :-1read $HOME/.vim/snippets/skeleton_minipage.tex<cr>$a
 nnoremap <leader>table :-1read $HOME/.vim/snippets/skeleton_table.tex<cr>1j$a
+nnoremap <leader>todo :-1read $HOME/.vim/snippets/skeleton_todo.tex<cr>1j$a
 " End Leader Key Mappings
 
 " Local Leader Key Mappings
