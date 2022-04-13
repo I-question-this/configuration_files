@@ -1,7 +1,7 @@
 # General
 AddKeysToAgent yes
 
-host github
+host github.com
   User git
   Hostname github.com
 
