@@ -55,7 +55,7 @@ def main(input_file:str, quiet:bool=False, output_file:str="output") -> None:
     return None
 
 
-def cli_interface() -> None:
+def cli() -> None:
     """Get program arguments from command line and run main"""
     args = parse_arguments()
     try:
@@ -68,4 +68,4 @@ def cli_interface() -> None:
 
 # Execute only if this file is being run as the entry file.
 if __name__ == "__main__":
-    cli_interface()
+    cli()
