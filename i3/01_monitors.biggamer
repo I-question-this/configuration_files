@@ -3,7 +3,7 @@
 ################################################################################
 #
 # Assign values for primary and secondary monitors
-set $mon_prim DVI-D-0
-set $mon_sec  DVI-D-1
-set $mon_third  DP-0.8
+set $mon_prim HDMI-0
+set $mon_sec  DVI-D-0
+set $mon_third  DVI-D-1
 

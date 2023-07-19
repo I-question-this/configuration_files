@@ -15,7 +15,7 @@ bindsym $mod+Ctrl+minus sticky toggle
 # change focus between tiling / floating windows
 bindsym $mod+space        focus mode_toggle
 # Start a terminal
-bindsym $mod+Return       exec i3-sensible-terminal
+bindsym $mod+Return       exec alacritty
 # Kill focused window
 bindsym $mod+Shift+q      kill
 # Change focused window
@@ -96,7 +96,7 @@ bindsym $mod+Shift+e      exec "i3-nagbar -t warning -m 'You pressed the exit \
 bindsym $mod+Shift+s mode "$mode_system"
 bindcode 160 exec --no-startup-id $Locker
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg" -fn "FiraCode-20"'
 
 # Manual managment of external displays
 bindsym $mod+shift+x mode "$mode_mon_sec"
