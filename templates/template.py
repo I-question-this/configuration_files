@@ -4,6 +4,7 @@
 __author__="Tyler Westland"
 
 import argparse
+import json
 import os
 import sys
 
@@ -22,14 +23,22 @@ def parse_arguments(args=None) -> argparse.Namespace:
     parser.add_argument("input_file", help="Path to the input file.")
     parser.add_argument("-o", "--output_file", help="Path to the output file.",
             default="output")
-    parser.add_argument("-q", "--quiet", help="Don't print out non-errors",
-                        default=False, action="store_true")
     args = parser.parse_args(args=args)
     return args
 
 
-def main(input_file:str, quiet:bool=False, output_file:str="output") -> None:
-    """Main function.
+def parse_file_input(input_file:str) -> dict:
+    with open(input_file) as fin:
+        return json.load(fin)
+
+
+def parse_file_output(output_data: dict, output_file:str):
+    with open(output_file, "w") as fout:
+        json.dump(output_data, fout)
+
+
+def main_wrapper(input_file:str, quiet:bool=False, output_file:str="output") -> None:
+    """Main wrapper.
 
     Parameters
     ----------
@@ -37,29 +46,38 @@ def main(input_file:str, quiet:bool=False, output_file:str="output") -> None:
         Path the input file.
     output_file: str
         Path to the output file. Default is 'output'
-    quiet: bool
-        Rather non-errors should be printed. Default is False
-    Returns
-    -------
-    ???
-        Something useful.
     Raises
     ------
     FileNotFoundError
         Means that the input file was not found.
     """
+    # Parse inputs
     # Error check if the file even exists
     if not os.path.isfile(input_file):
         raise FileNotFoundError("File not found: {}".format(input_file))
 
-    return None
+    input_data = parse_file_input(input_file)
+
+    # Run the main function
+    output_data = main(input_data)
+
+    # Handle outputs
+    parse_file_output(output_data, output_file)
+
+
+def main(input_data: dict) -> dict:
+    # Capitalize all data within dict
+    for key in input_data:
+        input_data[key] = input_data[key].capitalize()
+
+    return input_data
 
 
 def cli_interface() -> None:
     """Get program arguments from command line and run main"""
     args = parse_arguments()
     try:
-        main(**vars(args))
+        main_wrapper(**vars(args))
         sys.exit(0)
     except FileNotFoundError as exp:
         print(exp, file=sys.stderr)
