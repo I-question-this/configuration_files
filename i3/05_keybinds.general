@@ -100,6 +100,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb "$fg"
 
 # Manual managment of external displays
 bindsym $mod+shift+x mode "$mode_mon_sec"
+bindsym $mod+shift+ctrl+x mode "$mode_mon_third"
 
 # Move workspace to different display
 bindsym $mod+m mode "$mode_move_workspace"

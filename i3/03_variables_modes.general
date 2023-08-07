@@ -79,6 +79,27 @@ mode "$mode_mon_sec" {
   bindsym Escape  mode "default"
 }
 
+# Manual management of third display
+set $mode_mon_third Extra Screen: $mon_third | ($right) RIGHT, ($left) LEFT, \
+  ($up) ABOVE, ($down) BELOW, (s)SAME, (x) OFF
+mode "$mode_mon_third" {
+  bindsym $right  exec --no-startup-id xrandr --output $mon_third --auto \
+                    --right-of $mon_prim, mode "default"
+  bindsym $left   exec --no-startup-id xrandr --output $mon_third --auto \
+                    --left-of  $mon_prim, mode "default"
+  bindsym $up     exec --no-startup-id xrandr --output $mon_third --auto \
+                    --above-of $mon_prim, mode "default"
+  bindsym $down   exec --no-startup-id xrandr --output $mon_third --auto \
+                    --below-of $mon_prim, mode "default"
+  bindsym s       exec --no-startup-id xrandr --output $mon_third --auto \
+                    --same-as  $mon_prim, mode "default"
+  bindsym x       exec --no-startup-id xrandr --output $mon_third --auto \
+                    --off, mode "default"
+  # Back to normal: Enter or Escape
+  bindsym Return  mode "default"
+  bindsym Escape  mode "default"
+}
+
 # Move workspace to different display¬
 set $mode_move_workspace Move to output on: ($right) RIGHT, ($left) LEFT, \
   ($up) ABOVE, ($down) BELOW
