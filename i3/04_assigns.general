@@ -16,9 +16,6 @@ assign [class="(?i)^Yubico Authenticator$"] $ws2
 # Workspace 3: Reserach
 assign [class="Mendeley Desktop"] → $ws3
 assign [class="(?i)Zotero"] → $ws3
-# Workspace 4: Web browsing
-assign [class="(?i)^chromium-browser$"] $ws4
-assign [class="(?i)^firefox$"] $ws4
 
 # Workspace default screens
 workspace $ws1 output $mon_sec
