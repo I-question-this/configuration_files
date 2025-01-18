@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import gi
-# Install playerctl package on Arch or whatever
+# Install playerctl, gtk3, and python-goobject package on Arch or whatever
 gi.require_version('Playerctl', '2.0')
 from gi.repository import Playerctl, GLib
 import requests
