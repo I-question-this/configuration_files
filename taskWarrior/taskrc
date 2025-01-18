@@ -33,3 +33,4 @@ urgency.user.tag.Hobby.coefficient=-6.0
 urgency.user.tag.School.coefficient=4.5
 urgency.user.tag.Work.coefficient=9
 urgency.user.tag.IEEE.coefficient=4.5
+news.version=2.6.0
