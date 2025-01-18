@@ -1,5 +1,5 @@
 # Unison preferences
 label = Music: Padlet <-> biggamer
 root = /home/tyler/Music
-root = ssh://tyler@apartment.home//home/tyler/Music
+root = ssh://tyler@westlandfamily.hopto.org//home/tyler/Music
 sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537

@@ -2,7 +2,7 @@
 label = Games: Padlet <-> biggamer
 ignore = BelowPath SteamLibrary--Linux
 root = /home/tyler/Games
-root = ssh://tyler@apartment.home//home/tyler/Games
+root = ssh://tyler@westlandfamily.hopto.org//home/tyler/Games
 sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537
 
 ignore = Name {,.}*{.acf}

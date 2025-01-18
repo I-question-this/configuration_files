@@ -4,5 +4,5 @@ ignore = Name __pycache__
 follow = Path Development/DiscordPlays
 follow = Path Development/DiscordPlays--Development
 root = /home/tyler/Development
-root = ssh://tyler@apartment.home//home/tyler/Development
+root = ssh://tyler@westlandfamily.hopto.org//home/tyler/Development
 sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537

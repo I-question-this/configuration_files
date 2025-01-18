@@ -1,5 +1,5 @@
 # Unison preferences
 label = QuodLibet: Padlet <-> biggamer
 root = /home/tyler/.config/quodlibet
-root = ssh://tyler@apartment.home//home/tyler/.config/quodlibet
+root = ssh://tyler@westlandfamily.hopto.org//home/tyler/.config/quodlibet
 sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537

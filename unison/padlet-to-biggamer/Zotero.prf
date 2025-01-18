@@ -1,5 +1,5 @@
 # Unison preferences
 label = Zotero: Padlet <-> biggamer
 root = /home/tyler/Zotero
-root = ssh://tyler@apartment.home//home/tyler/Zotero
+root = ssh://tyler@westlandfamily.hopto.org//home/tyler/Zotero
 sshargs = -C -i ~/.ssh/padlet_to_biggamer_ed25519 -p 4537
