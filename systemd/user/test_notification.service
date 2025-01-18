@@ -1,0 +1,9 @@
+[Unit]
+Description=Send a notification, for testing.
+
+[Service]
+Type=simple
+User=%I
+Nice=10
+ExecStart=notify-send "TEST NOTIFICATION"
+

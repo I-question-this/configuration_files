@@ -1,0 +1,9 @@
+[Unit]
+Description=Change the background with pywal every so often.
+
+[Timer]
+OnCalendar=*:*
+Persistent=true
+
+[Install]
+WantedBy=timers.target
