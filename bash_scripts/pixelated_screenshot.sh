@@ -9,8 +9,9 @@ rm -f $img
 
 # Take screenshot
 scrot $img
+
 # Pixelate image
-convert $img -scale 10% -scale 1000% $img
+magick $img -scale 10% -scale 1000% $img
 
 # Print the path to the created image
 echo $img
