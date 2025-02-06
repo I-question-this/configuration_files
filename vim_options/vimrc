@@ -36,32 +36,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 " Many of these found at vimawesome.com
-" Code Completion
-" HTML, CSS, and JavaScript
-Plugin 'mattn/emmet-vim'
-" Code Linting
-Plugin 'w0rp/ale'
-Plugin 'tjdevries/overlength.vim'
-" Code Commenting Out
-Plugin 'scrooloose/nerdcommenter'
 " Colors
 Plugin 'dylanaraps/wal.vim'
-" Editor Configurations
-Plugin 'editorconfig/editorconfig-vim'
 " Hex Editing
 Plugin 'fidian/hexmode'
-" Git Additions
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
 " LaTeX
 Plugin 'lervag/vimtex'
-" Multiple Cursors
-Plugin 'terryma/vim-multiple-cursors'
 " Utilities
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-eunuch'
-" Syntax Highlighting
-Plugin 's3rvac/vim-syntax-retdecdsm'
 
 " All plugins must be added before the following line
 call vundle#end() " required
