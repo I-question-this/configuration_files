@@ -21,7 +21,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-if ! command -v keychain
+if command -v keychain
 then
 	eval $(keychain --eval -q)
 fi
