@@ -59,7 +59,7 @@ let g:lightline = {
 
 " Variable Settings
 " Colors
-colorscheme wal
+:silent! colorscheme wal
 " Sets comments to be a noticeably different color.
 set t_Co=256
 
