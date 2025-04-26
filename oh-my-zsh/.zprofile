@@ -21,12 +21,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Setup GoPath
-export GOPATH=$HOME/gopath
-export PATH=$PATH:$GOPATH:$GOPATH/bin
-
-# Set Android path
-export PATH=${PATH}:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
-
-# Start ssh-agent
-eval $(keychain --eval -q)
+if command -v keychain
+then
+	eval $(keychain --eval -q)
+fi

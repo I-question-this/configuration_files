@@ -59,7 +59,12 @@ let g:lightline = {
 
 " Variable Settings
 " Colors
-colorscheme wal
+try
+  colorscheme wal
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme desert
+endtry
+
 " Sets comments to be a noticeably different color.
 set t_Co=256
 
