@@ -57,7 +57,7 @@ function hey_man {
 
 function dunst_pause_level {
 
-  if [ $(dunstctl get-pause-level) -eq 100 ]; then
+  if [ $(dunstctl get-pause-level) -eq 0 ]; then
     local json='{ "full_text": "NOTIFICATIONS: ON", "color": "#00FF00" }'
     json_array=$(update_holder holder__dunst_pause_level "$json")
   else
