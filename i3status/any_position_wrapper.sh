@@ -55,10 +55,22 @@ function hey_man {
   fi
 }
 
+function dunst_pause_level {
+
+  if [ $(dunstctl get-pause-level) -eq 100 ]; then
+    local json='{ "full_text": "NOTIFICATIONS: ON", "color": "#00FF00" }'
+    json_array=$(update_holder holder__dunst_pause_level "$json")
+  else
+    local json='{ "full_text": "NOTIFICATIONS: OFF", "color": "#FF0000" }'
+    json_array=$(update_holder holder__dunst_pause_level "$json")
+  fi
+}
+
 i3status | (read line; echo "$line"; read line ; echo "$line" ; read line ; echo "$line" ; while true
 do
   read line
   json_array="$(echo $line | sed -e 's/^,//')"
   hey_man
+  dunst_pause_level
   echo ",$json_array" 
 done)
