@@ -125,7 +125,7 @@ bindsym $mod+c exec --no-startup-id xclip -o -sel clipboard | xclip -i -sel prim
 bindsym $mod+y exec --no-startup-id notify-send "rawdog" "$(rawdog -uw)" -i ~/.rawdog/imgs/icons/favicon.svg
 
 # Toggle notifications from dunst
-bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle && dunst_status.sh
+bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
 
 # Pomodero control
 bindsym $mod+p mode "$mode_pomodero"
