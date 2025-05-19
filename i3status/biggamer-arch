@@ -9,9 +9,11 @@
 general {
   colors = true
   interval = 5
+  output_format = i3bar
 }
 
 order += "read_file POMODERO"
+order += "tztime holder__hey_man"
 order += "volume master"
 order += "read_file NOTIFICATIONS"
 order += "ethernet _first_"
@@ -23,6 +25,10 @@ order += "load"
 order += "memory"
 order += "tztime local"
 order += "tztime UTC"
+
+tztime holder__hey_man {
+  format = "holder__hey_man"
+}
 
 read_file POMODERO {
   format = "%content"
