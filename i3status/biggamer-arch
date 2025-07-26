@@ -9,21 +9,25 @@
 general {
   colors = true
   interval = 5
+  output_format = i3bar
 }
 
 order += "read_file POMODERO"
 order += "volume master"
-order += "read_file NOTIFICATIONS"
+order += "tztime holder__dunst_pause_level"
 order += "ethernet _first_"
 order += "path_exists NORDVPN"
-order += "path_exists UC-VPN"
 order += "disk /"
 order += "disk /home"
-order += "disk /extra"
+order += "disk /mnt/old_harddrive"
 order += "load"
 order += "memory"
 order += "tztime local"
 order += "tztime UTC"
+
+tztime holder__dunst_pause_level {
+  format = "holder__dunst_pause_level"
+}
 
 read_file POMODERO {
   format = "%content"
@@ -56,10 +60,6 @@ path_exists NORDVPN {
   path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
-path_exists UC-VPN {
-  path = "/proc/sys/net/ipv4/conf/cscotun0"
-}
-
 
 disk "/" {
   format = "💽-/: %used/%total"
@@ -69,8 +69,8 @@ disk "/home" {
   format = "💽-/home: %used/%total"
 }
 
-disk "/extra" {
-  format = "💽-extra: %used/%total"
+disk "/mnt/old_harddrive" {
+  format = "💽-nextcloud backup: %used/%total"
 }
 
 load {
