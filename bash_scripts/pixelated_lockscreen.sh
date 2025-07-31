@@ -1,3 +1,3 @@
 #!/bin/bash
 
-i3lock -i $($HOME/.local/bin/pixelated_screenshot.sh)
+i3lock -i $(dunstctl set-paused true; $HOME/.local/bin/pixelated_screenshot.sh)
