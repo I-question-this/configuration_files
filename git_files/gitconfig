@@ -5,6 +5,7 @@
   username = I-question-this
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
