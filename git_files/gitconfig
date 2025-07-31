@@ -1,6 +1,7 @@
 [user]
-	email = tylerofthewest@gmail.com
+	email = tyler.westland@proton.me
   name = Tyler Westland
+	signingkey = AE73AAA61851684066C792C353602961B35213F1
 [credential "https://github.com"]
   username = I-question-this
 [push]
@@ -20,3 +21,7 @@
 [init]
 	defaultBranch = main
 	templatedir = ~/.git_template
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
