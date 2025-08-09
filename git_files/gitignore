@@ -12,3 +12,6 @@ docs/doxygen/latex
 
 # Tags files
 tags
+
+# Personal notes in a repo
+PERSONAL_NOTES.md
