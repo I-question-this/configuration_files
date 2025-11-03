@@ -126,7 +126,7 @@ mode "resize" {
   bindsym $mod+r  mode "default"
 }
 
-## Manual managment of main display brightness
+## Manual management of main display brightness
 set $mode_brightness Screen Brightness: 0:0, 1:10, 2:20, 3:30, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, Shift+0:100
 mode "$mode_brightness" {
     bindsym 0 exec --no-startup-id xbacklight -set 0, mode"default" 
