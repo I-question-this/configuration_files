@@ -16,26 +16,3 @@ assign [class="(?i)^Yubico Authenticator$"] $ws2
 # Workspace 3: Reserach
 assign [class="Mendeley Desktop"] → $ws3
 assign [class="(?i)Zotero"] → $ws3
-
-# Workspace default screens
-workspace $ws1 output $mon_sec
-workspace $ws2 output $mon_sec
-workspace $ws3 output $mon_sec
-workspace $ws4 output $mon_sec
-workspace $ws5 output $mon_prim
-workspace $ws6 output $mon_sec
-workspace $ws7 output $mon_sec
-workspace $ws8 output $mon_sec
-workspace $ws9 output $mon_sec
-workspace $ws10 output $mon_sec
-workspace $ws11 output $mon_sec
-workspace $ws12 output $mon_sec
-workspace $ws13 output $mon_sec
-workspace $ws14 output $mon_sec
-workspace $ws15 output $mon_sec
-workspace $ws16 output $mon_sec
-workspace $ws17 output $mon_sec
-workspace $ws18 output $mon_sec
-workspace $ws19 output $mon_sec
-workspace $ws20 output $mon_sec
-

@@ -99,8 +99,7 @@ bindcode 160 exec --no-startup-id $Locker
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg" -fn "FiraCode-20"'
 
 # Manual managment of external displays
-bindsym $mod+shift+x mode "$mode_mon_sec"
-bindsym $mod+shift+ctrl+x mode "$mode_mon_third"
+bindsym $mod+shift+x mode "$mode_screen_layout"
 
 # Move workspace to different display
 bindsym $mod+m mode "$mode_move_workspace"
@@ -120,9 +119,6 @@ bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Downloads'
 
 # Set primary clipboard to contents of clipboard
 bindsym $mod+c exec --no-startup-id xclip -o -sel clipboard | xclip -i -sel primary && xclip -o -sel clipboard > /tmp/clipboard-hack
-
-# Rawdog
-bindsym $mod+y exec --no-startup-id notify-send "rawdog" "$(rawdog -uw)" -i ~/.rawdog/imgs/icons/favicon.svg
 
 # Toggle notifications from dunst
 bindsym $mod+n exec --no-startup-id dunstctl set-paused toggle
