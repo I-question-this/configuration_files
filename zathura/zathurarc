@@ -1,1 +1,5 @@
+# Sets to be "darkmode" by default
 set recolor true
+# Set copying to be the more common clipboard option
+# https://unix.stackexchange.com/questions/339487/how-to-enable-copy-to-clipboard-with-zathura-pdf-poppler#339488
+set selection-clipboard clipboard
