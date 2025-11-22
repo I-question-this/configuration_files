@@ -38,8 +38,8 @@ exec xss-lock -- ~/.local/bin/pixelated_lockscreen.sh &
 exec ~/.fehbg &
 # Color Scheme
 exec wal -R &
-# Window editor (for transparency)
-exec xcompmgr -c &
+# Compositor (which i3 does not provide)
+exec picom -b &
 # Program for applying special rules for what is and isn't transparent
 exec devilspie -a &
 # Notifications
