@@ -44,5 +44,7 @@ exec picom -b &
 exec devilspie -a &
 # Notifications
 exec dunst &
+# Nvidia settings
+nvidia-settings --load-config-only
 # The actual window manager
 exec i3
