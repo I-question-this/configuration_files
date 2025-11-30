@@ -1,8 +1,8 @@
 #
-# /home/tyler//.nvidia-settings-rc
+# /home/tyler/.nvidia-settings-rc
 #
-# Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Thu Oct 22 08:17:03 2020
+# Configuration file for nvidia-settings - the NVIDIA Settings utility
+# Generated on Fri Nov 28 23:13:33 2025
 #
 
 # ConfigProperties:
@@ -11,7 +11,6 @@ RcFileLocale = C
 DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
-ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
 Timer = Memory_Used_(GPU_0),Yes,3000
 Timer = Thermal_Monitor_(GPU_0),Yes,1000
@@ -70,3 +69,5 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 [DPY:DVI-D-1]/ColorSpace=0
 [DPY:DVI-D-1]/ColorRange=0
 [DPY:DVI-D-1]/SynchronousPaletteUpdates=0
+[GPU:0]/GPUPowerMizerMode=0
+[GPU:0]/GPULogoBrightness=100
