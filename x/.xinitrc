@@ -45,6 +45,11 @@ exec devilspie -a &
 # Notifications
 exec dunst &
 # Nvidia settings
-nvidia-settings --load-config-only
+#nvidia-settings --load-config-only
+# Gnome keyring and dbus
+# https://wiki.archlinux.org/title/GNOME/Keyring#Using_gnome-keyring-daemon_outside_desktop_environments_(KDE,_GNOME,_XFCE,_...)
+dbus-update-activation-environment --all
+gnome-keyring-daemon --start --components=secrets
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 # The actual window manager
 exec i3
