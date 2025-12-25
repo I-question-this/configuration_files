@@ -10,9 +10,6 @@ assign [class="(?i)slack"] → $ws1
 assign [class="(?i)^signal"] → $ws1
 assign [class="(?i)^thunderbird$"] $ws14
 assign [class="(?i)^zoom$"] $ws1
-# Workspace 2: Security
-assign [class="(?i)kee(?i)pass(?i)x(?i)c"] → $ws2
-assign [class="(?i)^Yubico Authenticator$"] $ws2
 # Workspace 3: Reserach
 assign [class="Mendeley Desktop"] → $ws3
 assign [class="(?i)Zotero"] → $ws3
