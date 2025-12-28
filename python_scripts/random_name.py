@@ -54,7 +54,7 @@ def main(input_file:str, number:int, output_file:str="output") -> None:
 
     choices = random.choices(all_names, k=number)
 
-    print(choices)
+    print("\n".join(choices))
 
 
 def cli() -> None:
