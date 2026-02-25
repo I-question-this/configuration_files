@@ -12,18 +12,16 @@ general {
   output_format = i3bar
 }
 
-order += "read_file POMODERO"
-order += "volume master"
 order += "tztime holder__dunst_pause_level"
+order += "read_file POMODERO"
 order += "ethernet _first_"
 order += "path_exists NORDVPN"
 order += "disk /"
 order += "disk /home"
-order += "disk /mnt/old_harddrive"
+order += "volume master"
 order += "load"
 order += "memory"
 order += "tztime local"
-order += "tztime UTC"
 
 tztime holder__dunst_pause_level {
   format = "holder__dunst_pause_level"
@@ -69,10 +67,6 @@ disk "/home" {
   format = "💽-/home: %used/%total"
 }
 
-disk "/mnt/old_harddrive" {
-  format = "💽-nextcloud backup: %used/%total"
-}
-
 load {
   format = "💭: %1min"
 }
@@ -85,9 +79,4 @@ memory {
 
 tztime local {
   format = "%Y-%m-%d %H:%M:%S"
-}
-
-tztime UTC {
-  timezone = "UTC"
-  format = "UTC:%H:%M:%S"
 }
