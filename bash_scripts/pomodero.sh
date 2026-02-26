@@ -65,14 +65,22 @@ function version {
   printf "%s\n" "${txt[@]}"
 }
 
+function broadcast-notification {
+  notify-send -a Pomodero "$1" "$2"
+  # First espeak is to get it started as it tends to skip the first phoneme
+  echo "STARTUP" | espeak; echo $2 | espeak
+}
+
 function app-work {
   work_until=$(date -d "+$WORK minutes" "+%R")
   # Set i3 status file
-  echo "Work until $work_until" > $STATUS_FILE
+  # Japanese symbol for work. Used to mean "open for business"
+  echo "🈺 $work_until" > $STATUS_FILE
   # Ensure notifications are on
   dunstctl set-paused false && dunst_status.sh
   # Notify beginning of work session
-  notify-send "Pomodero: WORK START"\
+  broadcast-notification \
+    "WORK START" \
     "Work for $WORK minutes. Ends at $work_until"
   # Wait 10 seconds before turning off notifications
   sleep 10s
@@ -83,7 +91,9 @@ function app-work {
   # Turn on notifications
   dunstctl set-paused false && dunst_status.sh
   # Notify end of work session
-  notify-send "Pomodero: WORK END" "Work is done, good job."
+  broadcast-notification \
+    "WORK END" \
+    "Work is done, good job."
   # Reset i3 status file
   rm $STATUS_FILE
 }
@@ -94,16 +104,18 @@ function break-command {
 
   break_until=$(date -d "+$break_length minutes" "+%R")
   # Set i3 status file
-  echo "$1 break until $break_until" > $STATUS_FILE
+  echo "💤 $break_until" > $STATUS_FILE
   # Ensure notifications are on
   dunstctl set-paused false && dunst_status.sh
   # Notify beginning of break session
-  notify-send "Pomodero: $break_type BREAK START"\
+  broadcast-notification \
+    "$break_type BREAK START" \
     "Break for $break_length minutes. Ends at $break_until"
   # Sleep for break_length minutes
   sleep ${break_length}m
   # Notify end of break session
-  notify-send "Pomodero: $break_type BREAK END"\
+  broadcast-notification \
+    "$break_type BREAK END" \
     "End of break."
   # Reset i3 status file
   rm $STATUS_FILE
