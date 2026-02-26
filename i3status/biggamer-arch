@@ -29,7 +29,8 @@ tztime holder__dunst_pause_level {
 
 read_file POMODERO {
   format = "%content"
-  format_bad = "No Pomodero Timer"
+  # Japanese symbol for vacancy
+  format_bad = "🈳 N/A"
   path = "/home/tyler/.config/i3status/pomodero"
 }
 
