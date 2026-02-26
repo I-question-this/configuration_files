@@ -12,12 +12,12 @@ general {
   output_format = i3bar
 }
 
-order += "tztime holder__dunst_pause_level"
 order += "read_file POMODERO"
 order += "ethernet _first_"
 order += "path_exists NORDVPN"
 order += "disk /"
 order += "disk /home"
+order += "tztime holder__dunst_pause_level"
 order += "volume master"
 order += "load"
 order += "memory"
@@ -34,22 +34,16 @@ read_file POMODERO {
 }
 
 volume master {
-  format = "♪: %volume"
-  format_muted = "♪: muted (%volume)"
+  format = "🔊 %volume"
+  format_muted = "🔇 %volume"
   device = "default"
   mixer = "Master"
   mixer_idx = 0
 }
 
-read_file NOTIFICATIONS {
-  format = "%title: on"
-  format_bad = "%title: off"
-  path = "/home/tyler/.config/dunst/is_unpaused"
-}
-
 ethernet _first_ {
-  format_up = "E: %ip (%speed)"
-  format_down = "E: down"
+  format_up = "%ip (%speed)"
+  format_down = "ETHERNET DOWN"
 }
 
 path_exists NORDVPN {
@@ -60,19 +54,19 @@ path_exists NORDVPN {
 
 
 disk "/" {
-  format = "💽-/: %used/%total"
+  format = "💽 %used/%total"
 }
 
 disk "/home" {
-  format = "💽-/home: %used/%total"
+  format = "🏠 %used/%total"
 }
 
 load {
-  format = "💭: %1min"
+  format = "💭 %1min"
 }
 
 memory {
-  format = ": %used/%total"
+  format = " %used/%total"
   threshold_degraded = "1G"
   format_degraded = "MEMORY < %available"
 }
